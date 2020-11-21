@@ -4,6 +4,11 @@ class myArray{
   static const int MAX = 100;
   double a[MAX];
   int n;
+  void copy(const  myArray& b){
+    n = b.n;
+    for(int i = 0; i < n; i++)
+      a[i] = b.a[i];
+  }
   public:
   double get(const int index = 0 ){
     if(index < n) return a[index];
@@ -22,9 +27,7 @@ class myArray{
   }
   myArray(const myArray& b){
     cout << "copy construcotr" << endl;
-    n = b.n;
-    for(int i = 0; i < n; i++)
-      a[i] = b.a[i];
+    copy(b);
   }
   ~myArray(){
     cout << "Destructor" << endl;
@@ -36,9 +39,7 @@ class myArray{
   }
   void operator=(const myArray& b){
     cout << "Assignment myArray" << endl;
-    n = b.n;
-    for(int i = 0; i < n; i++)
-      a[i] = b.a[i];
+    copy(b);
   }
 };
 void f1(void);
