@@ -44,7 +44,8 @@ int main(){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
-  myArray p(d);
+  myArray p;
+  p = d;
   cout << "before call f2" << endl;
   f2(p);
 }
