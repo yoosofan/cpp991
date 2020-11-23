@@ -50,6 +50,16 @@ class myArray{
     cout << "operator + in myArray" << endl;
     return c;
   }
+  myArray operator-(const myArray& b){
+    myArray c;
+    c.n = b.n;
+    for(int i = 0; i < this -> n; i++ )
+      c.a[i] = a[i] - b.a[i];
+    cout << "operator - in myArray" << endl;
+    return c;
+  }
+
+  
 };
 void f1(void);
 void f2(myArray);
@@ -62,7 +72,7 @@ void f1(void){
   myArray d(x, sizeof(x) / sizeof(double));
   myArray p, q;
   q = p = d;
-  q = p + d ;
+  q = p - d ;
   cout << "q.print();" << endl;
   q.print();
   cout << "before call f2" << endl;

@@ -1,4 +1,4 @@
-2020/11/23 10:46:13
+2020/11/23 10:50:06
 
 .. code:: sh
 
@@ -6,15 +6,15 @@
   cpp991$ ./a.out
   Assignment myArray
   Assignment myArray
-  operator + in myArray
+  operator - in myArray
   Assignment myArray
   Destructor
   q.print();
    n = 4
-  a[0] = 20
-  a[1] = 24
-  a[2] = 68
-  a[3] = 108
+  a[0] = 0
+  a[1] = 0
+  a[2] = 0
+  a[3] = 0
   before call f2
   copy construcotr
    n = 4
@@ -27,6 +27,7 @@
   Destructor
   Destructor
   cpp991$ 
+
 
 
 2020/11/23 10:17:55
