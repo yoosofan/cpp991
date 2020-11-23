@@ -37,9 +37,10 @@ class myArray{
     for(int i = 0; i < n; i++)
       cout << "a[" << i << "] = " << a[i] << endl;
   }
-  void operator=(const myArray& b){
+  myArray& operator=(const myArray& b){
     cout << "Assignment myArray" << endl;
     copy(b);
+    return *this;
   }
 };
 void f1(void);
