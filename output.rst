@@ -1,25 +1,13 @@
-2020/11/23 10:29:45
+2020/11/23 10:44:23
 
-.. code:: cpp
+.. code:: sh
 
-  cpp991$ g++ myArray.cpp 
-  cpp991$ ./a.out
-  Assignment myArray
-  Assignment myArray
-  operator + in myArray
-  Assignment myArray
-  Destructor
-  before call f2
-  copy construcotr
-   n = 4
-  a[0] = 10
-  a[1] = 12
-  a[2] = 34
-  a[3] = 54
-  Destructor
-  Destructor
-  Destructor
-  Destructor
+  myArray.cpp:67:12: error: expected ‘;’ before ‘cout’
+     67 |   q.print()
+        |            ^
+        |            ;
+     68 |   cout << "before call f2" << endl;
+        |   ~~~~      
   cpp991$ 
 
 2020/11/23 10:17:55
