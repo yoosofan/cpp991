@@ -1,19 +1,22 @@
-2020/11/23 10:15:49
+2020/11/23 10:29:45
 
-.. code:: sh
+.. code:: cpp
 
-  g++ myArray.cpp 
-  myArray.cpp: In function ‘void f1()’:
-  myArray.cpp:55:11: error: no match for ‘operator=’ (operand types are ‘myArray’ and ‘void’)
-     55 |   q = p = d;
-        |           ^
-  myArray.cpp:40:8: note: candidate: ‘void myArray::operator=(const myArray&)’
-     40 |   void operator=(const myArray& b){
-        |        ^~~~~~~~
-  myArray.cpp:40:33: note:   no known conversion for argument 1 from ‘void’ to ‘const myArray&’
-     40 |   void operator=(const myArray& b){
-        |                  ~~~~~~~~~~~~~~~^
-  cpp991$ 
+  cpp991$ g++ myArray.cpp 
+  cpp991$ ./a.out
+  Assignment myArray
+  Assignment myArray
+  before call f2
+  copy construcotr
+   n = 4
+  a[0] = 10
+  a[1] = 12
+  a[2] = 34
+  a[3] = 54
+  Destructor
+  Destructor
+  Destructor
+  Destructor
 
 2020/11/23 10:17:55
 
