@@ -63,6 +63,8 @@ void f1(void){
   myArray p, q;
   q = p = d;
   q = p + d ;
+  cout << "q.print();" << endl;
+  q.print()
   cout << "before call f2" << endl;
   f2(p);
 }
