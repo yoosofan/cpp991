@@ -64,7 +64,7 @@ void f1(void){
   q = p = d;
   q = p + d ;
   cout << "q.print();" << endl;
-  q.print()
+  q.print();
   cout << "before call f2" << endl;
   f2(p);
 }
