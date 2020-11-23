@@ -6,6 +6,9 @@
   cpp991$ ./a.out
   Assignment myArray
   Assignment myArray
+  operator + in myArray
+  Assignment myArray
+  Destructor
   before call f2
   copy construcotr
    n = 4
@@ -17,6 +20,7 @@
   Destructor
   Destructor
   Destructor
+  cpp991$ 
 
 2020/11/23 10:17:55
 
