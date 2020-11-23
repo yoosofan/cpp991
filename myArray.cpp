@@ -5,9 +5,9 @@ class myArray{
   double a[MAX];
   int n;
   void copy(const  myArray& b){
-    n = b.n;
+    this -> n = b.n;
     for(int i = 0; i < n; i++)
-      a[i] = b.a[i];
+    this -> a[i] = b.a[i];
   }
   public:
   double get(const int index = 0 ){
