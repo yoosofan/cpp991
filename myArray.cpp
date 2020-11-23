@@ -19,11 +19,11 @@ class myArray{
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
-  myArray(const double *ma = nullptr, int k = 0){
-    if( k > MAX ) 
-      k = MAX ;
-    for(n = k--; k >= 0; k--)
-      a[k] = ma[k];
+  myArray(const double *a = nullptr, int n = 0){
+    if( n > MAX ) 
+      n = MAX ;
+    for(this -> n = n--; n >= 0; n--)
+      this -> a[n] = a[n];
   }
   myArray(const myArray& b){
     cout << "copy construcotr" << endl;
