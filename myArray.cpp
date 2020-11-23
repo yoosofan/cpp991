@@ -42,6 +42,13 @@ class myArray{
     copy(b);
     return *this;
   }
+  myArray operator+(const myArray& b){
+    myArray c;
+    c.n = b.n;
+    for(int i = 0; i < this -> n; i++ )
+      c.a[i] = a[i] + b.a[i];
+    return c;
+  }
 };
 void f1(void);
 void f2(myArray);
