@@ -81,6 +81,12 @@ class myArray{
       a[i]++;
     return *this;
   }
+  myArray operator++(int){
+    myArray c(*this);
+    for(int i = 0; i < n; i++)
+      a[i] ++;
+    return c;
+  }
 };
 void f1(void);
 void f2(myArray);
@@ -97,6 +103,13 @@ void f1(void){
   q.print();
   cout << "p.print() : ";
   p.print();
+  p = q = d;
+  p = q++;
+  cout << "q.print() : ";
+  q.print();
+  cout << "p.print() : ";
+  p.print();
+
   cout << "before call f2" << endl;
   f2(p);
 }
