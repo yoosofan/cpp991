@@ -19,7 +19,7 @@ class myArray{
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
-  myArray(const double *a = nullptr, int n = 0){
+  myArray(const double *a, int n){
     if( n > MAX ) 
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
@@ -58,8 +58,6 @@ class myArray{
     cout << "operator - in myArray" << endl;
     return c;
   }
-
-  
 };
 void f1(void);
 void f2(myArray);
@@ -71,7 +69,6 @@ void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
   myArray p, q;
-  q = p = d;
   q = p - d ;
   cout << "q.print();" << endl;
   q.print();
