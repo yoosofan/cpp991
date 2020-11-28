@@ -93,9 +93,10 @@ void f1(void){
   myArray d(x, sizeof(x) / sizeof(double));
   myArray p(d), q(d);
   p = ++q;
-  cout << "q.print() : "
+  cout << "q.print() : ";
   q.print();
-  cout << "p.print() : "
+  cout << "p.print() : ";
+  p.print();
   cout << "before call f2" << endl;
   f2(p);
 }
