@@ -44,7 +44,7 @@ class myArray{
     return *this;
   }
   myArray operator+(const myArray& b){
-    myArray c;
+    myArray c(b);
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
       c.a[i] = a[i] + b.a[i];
@@ -52,7 +52,7 @@ class myArray{
     return c;
   }
   myArray operator-(const myArray& b){
-    myArray c;
+    myArray c(b);
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
       c.a[i] = a[i] - b.a[i];
@@ -69,7 +69,7 @@ int main(){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
-  myArray p, q;
+  myArray p(d), q(d);
   q = p - d ;
   cout << "q.print();" << endl;
   q.print();

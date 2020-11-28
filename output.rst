@@ -1,35 +1,33 @@
-2020/11/28 10:07:29
+2020/11/28 10:10:43
 
 .. code:: sh
 
-  g++ myArray.cpp 
-  myArray.cpp: In member function ‘myArray myArray::operator+(const myArray&)’:
-  myArray.cpp:47:13: error: use of deleted function ‘myArray::myArray()’
-     47 |     myArray c;
-        |             ^
-  myArray.cpp:13:3: note: declared here
-     13 |   myArray() = delete ;
-        |   ^~~~~~~
-  myArray.cpp: In member function ‘myArray myArray::operator-(const myArray&)’:
-  myArray.cpp:55:13: error: use of deleted function ‘myArray::myArray()’
-     55 |     myArray c;
-        |             ^
-  myArray.cpp:13:3: note: declared here
-     13 |   myArray() = delete ;
-        |   ^~~~~~~
-  myArray.cpp: In function ‘void f1()’:
-  myArray.cpp:72:11: error: use of deleted function ‘myArray::myArray()’
-     72 |   myArray p, q;
-        |           ^
-  myArray.cpp:13:3: note: declared here
-     13 |   myArray() = delete ;
-        |   ^~~~~~~
-  myArray.cpp:72:14: error: use of deleted function ‘myArray::myArray()’
-     72 |   myArray p, q;
-        |              ^
-  myArray.cpp:13:3: note: declared here
-     13 |   myArray() = delete ;
-        |   ^~~~~~~
+  cpp991$ g++ myArray.cpp 
+  cpp991$ ./a.out
+  copy construcotr
+  copy construcotr
+  copy construcotr
+  operator - in myArray
+  Assignment myArray
+  Destructor
+  q.print();
+   n = 4
+  a[0] = 0
+  a[1] = 0
+  a[2] = 0
+  a[3] = 0
+  before call f2
+  copy construcotr
+   n = 4
+  a[0] = 10
+  a[1] = 12
+  a[2] = 34
+  a[3] = 54
+  Destructor
+  Destructor
+  Destructor
+  Destructor
+  cpp991$ 
 
 
 
