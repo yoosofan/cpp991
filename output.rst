@@ -2,31 +2,21 @@
 
 .. code:: sh
 
-  cpp991$ ./a.out
-  copy construcotr
-  copy construcotr
-  p == q
-  copy construcotr
-  Assignment myArray
-  Destructor
-  p != q
-  q.print();
-   n = 4
-  a[0] = -10
-  a[1] = -12
-  a[2] = -34
-  a[3] = -54
-  before call f2
-  copy construcotr
-   n = 4
-  a[0] = 10
-  a[1] = 12
-  a[2] = 34
-  a[3] = 54
-  Destructor
-  Destructor
-  Destructor
-  Destru
+  cpp991$ g++ myArray.cpp 
+  myArray.cpp: In function ‘void f1()’:
+  myArray.cpp:96:25: error: expected ‘;’ before ‘q’
+     96 |   cout << "q.print() : "
+        |                         ^
+        |                         ;
+     97 |   q.print();
+        |   ~                      
+  myArray.cpp:98:25: error: expected ‘;’ before ‘cout’
+     98 |   cout << "p.print() : "
+        |                         ^
+        |                         ;
+     99 |   cout << "before call f2" << endl;
+        |   ~~~~                   
+  cpp991$ 
 
 
 2020/11/23 10:17:55
