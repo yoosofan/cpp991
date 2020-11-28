@@ -65,7 +65,7 @@ class myArray{
       c.a[i] = - c.a[i];
     return c;
   }
-  bool opeartor==(const myArray& b) const {
+  bool operator==(const myArray& b) const {
     bool retVal = false;
     int i = 0;
     if(n == b.n)

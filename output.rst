@@ -1,230 +1,34 @@
-2020/11/28 10:28:43
+2020/11/28 10:31:09
 
 .. code:: sh
 
-  and ‘myArray’)
-     90 |   if(p == q)
-        |      ~ ^~ ~
-        |      |    |
-        |      |    myArray
-        |      myArray
-  In file included from /usr/include/c++/9/iosfwd:40,
-                   from /usr/include/c++/9/ios:38,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/postypes.h:222:5: note: candidate: ‘template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)’
-    222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/postypes.h:222:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::fpos<_StateT>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:64,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_pair.h:448:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)’
-    448 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::pair<_T1, _T2>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_iterator.h:325:5: note: candidate: ‘template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)’
-    325 |     operator==(const reverse_iterator<_Iterator>& __x,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_iterator.h:325:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::reverse_iterator<_Iterator>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_iterator.h:363:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’
-    363 |     operator==(const reverse_iterator<_IteratorL>& __x,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_iterator.h:363:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::reverse_iterator<_Iterator>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_iterator.h:1139:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’
-   1139 |     operator==(const move_iterator<_IteratorL>& __x,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_iterator.h:1139:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::move_iterator<_IteratorL>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_iterator.h:1145:5: note: candidate: ‘template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)’
-   1145 |     operator==(const move_iterator<_Iterator>& __x,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_iterator.h:1145:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::move_iterator<_IteratorL>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/string:41,
-                   from /usr/include/c++/9/bits/locale_classes.h:40,
-                   from /usr/include/c++/9/bits/ios_base.h:41,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/allocator.h:168:5: note: candidate: ‘template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)’
-    168 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/allocator.h:168:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::allocator<_CharT>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/string:55,
-                   from /usr/include/c++/9/bits/locale_classes.h:40,
-                   from /usr/include/c++/9/bits/ios_base.h:41,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/basic_string.h:6141:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
-   6141 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/basic_string.h:6141:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/string:55,
-                   from /usr/include/c++/9/bits/locale_classes.h:40,
-                   from /usr/include/c++/9/bits/ios_base.h:41,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/basic_string.h:6149:5: note: candidate: ‘template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)’
-   6149 |     operator==(const basic_string<_CharT>& __lhs,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/basic_string.h:6149:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::__cxx11::basic_string<_CharT>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/string:55,
-                   from /usr/include/c++/9/bits/locale_classes.h:40,
-                   from /usr/include/c++/9/bits/ios_base.h:41,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/basic_string.h:6163:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
-   6163 |     operator==(const _CharT* __lhs,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/basic_string.h:6163:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   mismatched types ‘const _CharT*’ and ‘myArray’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/string:55,
-                   from /usr/include/c++/9/bits/locale_classes.h:40,
-                   from /usr/include/c++/9/bits/ios_base.h:41,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/basic_string.h:6175:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
-   6175 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/basic_string.h:6175:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
-     90 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/ios_base.h:46,
-                   from /usr/include/c++/9/ios:42,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/system_error:292:3: note: candidate: ‘bool std::operator==(const std::error_code&, const std::error_code&)’
-    292 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
-        |   ^~~~~~~~
-  /usr/include/c++/9/system_error:292:32: note:   no known conversion for argument 1 from ‘myArray’ to ‘const std::error_code&’
-    292 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
-        |              ~~~~~~~~~~~~~~~~~~^~~~~
-  /usr/include/c++/9/system_error:297:3: note: candidate: ‘bool std::operator==(const std::error_code&, const std::error_condition&)’
-    297 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
-        |   ^~~~~~~~
-  /usr/include/c++/9/system_error:297:32: note:   no known conversion for argument 1 from ‘myArray’ to ‘const std::error_code&’
-    297 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
-        |              ~~~~~~~~~~~~~~~~~~^~~~~
-  /usr/include/c++/9/system_error:304:3: note: candidate: ‘bool std::operator==(const std::error_condition&, const std::error_code&)’
-    304 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
-        |   ^~~~~~~~
-  /usr/include/c++/9/system_error:304:37: note:   no known conversion for argument 1 from ‘myArray’ to ‘const std::error_condition&’
-    304 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
-        |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-  /usr/include/c++/9/system_error:311:3: note: candidate: ‘bool std::operator==(const std::error_condition&, const std::error_condition&)’
-    311 |   operator==(const error_condition& __lhs,
-        |   ^~~~~~~~
-  /usr/include/c++/9/system_error:311:37: note:   no known conversion for argument 1 from ‘myArray’ to ‘const std::error_condition&’
-    311 |   operator==(const error_condition& __lhs,
-        |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-  In file included from /usr/include/c++/9/bits/locale_facets.h:48,
-                   from /usr/include/c++/9/bits/basic_ios.h:37,
-                   from /usr/include/c++/9/ios:44,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/streambuf_iterator.h:208:5: note: candidate: ‘template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)’
-    208 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/streambuf_iterator.h:208:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:90:11: note:   ‘myArray’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
-     90 |   if(p == q)
-        |           ^
-  myArray.cpp:96:8: error: no match for ‘operator==’ (operand types are ‘myArray’ and ‘myArray’)
-     96 |   if(p == q)
-        |      ~ ^~ ~
-        |      |    |
-        |      |    myArray
-        |      myArray
-  In file included from /usr/include/c++/9/iosfwd:40,
-                   from /usr/include/c++/9/ios:38,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/postypes.h:222:5: note: candidate: ‘template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)’
-    222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/postypes.h:222:5: note:   template argument deduction/substitution failed:
-  myArray.cpp:96:11: note:   ‘myArray’ is not derived from ‘const std::fpos<_StateT>’
-     96 |   if(p == q)
-        |           ^
-  In file included from /usr/include/c++/9/bits/stl_algobase.h:64,
-                   from /usr/include/c++/9/bits/char_traits.h:39,
-                   from /usr/include/c++/9/ios:40,
-                   from /usr/include/c++/9/ostream:38,
-                   from /usr/include/c++/9/iostream:39,
-                   from myArray.cpp:1:
-  /usr/include/c++/9/bits/stl_pair.h:448:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)’
-    448 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
-        |     ^~~~~~~~
-  /usr/include/c++/9/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
+  cpp991$ g++ myArray.cpp 
+  cpp991$ ./a.out
+  copy construcotr
+  copy construcotr
+  p == q
+  copy construcotr
+  Assignment myArray
+  Destructor
+  p != q
+  q.print();
+   n = 4
+  a[0] = -10
+  a[1] = -12
+  a[2] = -34
+  a[3] = -54
+  before call f2
+  copy construcotr
+   n = 4
+  a[0] = 10
+  a[1] = 12
+  a[2] = 34
+  a[3] = 54
+  Destructor
+  Destructor
+  Destructor
+  Destructor
+  cpp991$ 
 
 
 
