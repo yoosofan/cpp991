@@ -65,6 +65,17 @@ class myArray{
       c.a[i] = - c.a[i];
     return c;
   }
+  bool opeartor==(const myArray& b) const {
+    bool retVal = false;
+    int i = 0;
+    if(n == b.n)
+      for(i = 0; i < n; i++)
+        if(a[i] != b.a[i])
+          break;
+    if(i == n)
+      retVal = true;
+    return retVal;
+  }
 };
 void f1(void);
 void f2(myArray);
@@ -76,7 +87,17 @@ void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
   myArray p(d), q(d);
+  if(p == q)
+    cout << "p == q" << endl;
+  else
+    cout << "p != q" << endl;
+    
   q = - d ;
+  if(p == q)
+    cout << "p == q" << endl;
+  else
+    cout << "p != q" << endl;
+
   cout << "q.print();" << endl;
   q.print();
   cout << "before call f2" << endl;
