@@ -16,7 +16,7 @@ class myArray{
     cout << "Error in getting an element of myArray" << endl;
     return 0;
   }
-  void set(const int index, const double value) const{
+  void set(const int index, const double value){
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
