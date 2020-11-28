@@ -10,7 +10,7 @@ class myArray{
     this -> a[i] = b.a[i];
   }
   public:
-  myArray() = delete ;
+  // myArray() = delete ;
   double get(const int index = 0 ){
     if(index < n) return a[index];
     cout << "Error in getting an element of myArray" << endl;
@@ -20,7 +20,7 @@ class myArray{
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
-  myArray(const double *a, int n){
+  myArray(const double *a=nullptr, int n=0){
     if( n > MAX ) 
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
@@ -44,7 +44,7 @@ class myArray{
     return *this;
   }
   myArray operator+(const myArray& b){
-    myArray c(b);
+    myArray c;
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
       c.a[i] = a[i] + b.a[i];
@@ -52,7 +52,7 @@ class myArray{
     return c;
   }
   myArray operator-(const myArray& b){
-    myArray c(b);
+    myArray c;
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
       c.a[i] = a[i] - b.a[i];

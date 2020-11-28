@@ -1,10 +1,9 @@
-2020/11/28 10:10:43
+2020/11/28 10:13:34
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out
-  copy construcotr
   copy construcotr
   copy construcotr
   operator - in myArray
