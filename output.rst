@@ -1,34 +1,14 @@
-2020/11/28 10:31:09
+2020/11/28 10:32:20
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  cpp991$ ./a.out
-  copy construcotr
-  copy construcotr
-  p == q
-  copy construcotr
-  Assignment myArray
-  Destructor
-  p != q
-  q.print();
-   n = 4
-  a[0] = -10
-  a[1] = -12
-  a[2] = -34
-  a[3] = -54
-  before call f2
-  copy construcotr
-   n = 4
-  a[0] = 10
-  a[1] = 12
-  a[2] = 34
-  a[3] = 54
-  Destructor
-  Destructor
-  Destructor
-  Destructor
+  myArray.cpp: In member function ‘void myArray::set(int, double) const’:
+  myArray.cpp:20:30: error: assignment of read-only location ‘((const myArray*)this)->myArray::a[((int)index)]’
+     20 |     if( index < n ) a[index] = value;
+        |                     ~~~~~~~~~^~~~~~~
   cpp991$ 
+
 
 
 

@@ -11,12 +11,12 @@ class myArray{
   }
   public:
   // myArray() = delete ;
-  double get(const int index = 0 ){
+  double get(const int index = 0 ) const{
     if(index < n) return a[index];
     cout << "Error in getting an element of myArray" << endl;
     return 0;
   }
-  void set(const int index, const double value){
+  void set(const int index, const double value) const{
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
