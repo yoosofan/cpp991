@@ -1,33 +1,12 @@
-2020/11/28 10:33:47
+2020/11/28 10:35:14
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  cpp991$ ./a.out
-  copy construcotr
-  copy construcotr
-  p == q
-  copy construcotr
-  Assignment myArray
-  Destructor
-  p != q
-  q.print();
-   n = 4
-  a[0] = -10
-  a[1] = -12
-  a[2] = -34
-  a[3] = -54
-  before call f2
-  copy construcotr
-   n = 4
-  a[0] = 10
-  a[1] = 12
-  a[2] = 34
-  a[3] = 54
-  Destructor
-  Destructor
-  Destructor
-  Destruct
+  myArray.cpp:29:29: error: constructors may not be cv-qualified
+     29 |   myArray(const myArray& b) const{
+        |                             ^~~~~
+  cpp991$ 
 
 
 

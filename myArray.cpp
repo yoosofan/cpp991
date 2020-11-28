@@ -26,14 +26,14 @@ class myArray{
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
   }
-  myArray(const myArray& b){
+  myArray(const myArray& b) const{
     cout << "copy construcotr" << endl;
     copy(b);
   }
   ~myArray(){
     cout << "Destructor" << endl;
   }
-  void print(void){
+  void print(void) const{
     cout << " n = " << n << endl;
     for(int i = 0; i < n; i++)
       cout << "a[" << i << "] = " << a[i] << endl;
@@ -43,7 +43,7 @@ class myArray{
     copy(b);
     return *this;
   }
-  myArray operator+(const myArray& b){
+  myArray operator+(const myArray& b) const{
     myArray c;
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
@@ -51,7 +51,7 @@ class myArray{
     cout << "operator + in myArray" << endl;
     return c;
   }
-  myArray operator-(const myArray& b){
+  myArray operator-(const myArray& b) const{
     myArray c;
     c.n = b.n;
     for(int i = 0; i < this -> n; i++ )
@@ -59,7 +59,7 @@ class myArray{
     cout << "operator - in myArray" << endl;
     return c;
   }
-  myArray operator-(void){
+  myArray operator-(void) const{
     myArray c(*this);
     for(int i=0; i<n; i++)
       c.a[i] = - c.a[i];
