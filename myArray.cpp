@@ -10,7 +10,7 @@ class myArray{
     this -> a[i] = b.a[i];
   }
   public:
-  myArray() = default ;
+  myArray() = delete ;
   double get(const int index = 0 ){
     if(index < n) return a[index];
     cout << "Error in getting an element of myArray" << endl;
