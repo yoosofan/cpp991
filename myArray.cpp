@@ -26,7 +26,7 @@ class myArray{
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
   }
-  myArray(const myArray& b) const{
+  myArray(const myArray& b){
     cout << "copy construcotr" << endl;
     copy(b);
   }
