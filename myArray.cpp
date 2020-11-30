@@ -106,6 +106,9 @@ void f1(void);
 void f2(myArray);
 int main(){
   f1();
+  cout << "2 " ;
+  operator<<(cout, "2 ");
+  
   return 0;
 }
 myArray operator+(const myArray& a, const myArray& b){
@@ -114,7 +117,7 @@ myArray operator+(const myArray& a, const myArray& b){
     int min = a.n < b.n ? a.n : b.n;
     for(int i = 0; i < min; i++ )
       c.a[i] = a.a[i] + b.a[i];
-    cout << "operator + in myArray" << endl;
+    cout<< "operator + in myArray" << endl;
     return c;
   }
 
