@@ -1,10 +1,11 @@
-2020/11/30 10:04:25
+2020/11/30 10:06:57
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out 
-  34
+  index out of range
+  10
   before call f2
   Destructor
   cpp991$ 

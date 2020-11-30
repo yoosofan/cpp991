@@ -88,6 +88,10 @@ class myArray{
     return c;
   }
   double operator[](int index){
+    if(index >= 0){
+      cout << "index out of range" << endl;
+      index = 0;
+    }
     return a[index];
   }
 };
@@ -100,7 +104,7 @@ int main(){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
-  cout << d[2] << endl;
+  cout << d[9] << endl;
 
   cout << "before call f2" << endl;
   //f2(p);
