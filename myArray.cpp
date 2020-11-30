@@ -106,9 +106,9 @@ int main(){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
-  cout << d[9] << endl;
+  cout << d[1] << endl;
   d[1] = 15;
-
+  // d.print();  cout << d << endl;
   cout << "before call f2" << endl;
   //f2(p);
 }
