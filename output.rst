@@ -7,9 +7,6 @@
   myArray.cpp:32:21: error: incompatible types in assignment of ‘double*’ to ‘double [100]’
      32 |     a = new double[1];
         |                     ^
-  myArray.cpp:33:7: error: ‘o’ was not declared in this scope
-     33 |     a[o] = x;
-        |       ^
   cpp991$ 
 
 

@@ -30,7 +30,7 @@ class myArray{
   myArray(double x){
     n = 1;
     a = new double[1];
-    a[o] = x;
+    a[0] = x;
   }
   myArray(const myArray& b){
     cout << "copy construcotr" << endl;
