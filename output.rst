@@ -2,15 +2,206 @@
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  cpp991$ ./a.out 
-  12
-  operator + in myArray
-  Assignment myArray
-  Destructor
-  Destructor
-  before call f2
-  Destructor
-  cpp991$ 
+  myArray.cpp: In function ‘void f1()’:
+  myArray.cpp:116:9: error: no match for ‘operator+’ (operand types are ‘int’ and ‘myArray’)
+    116 |   d = 5 + d ;
+        |       ~ ^ ~
+        |       |   |
+        |       int myArray
+  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
+                   from /usr/include/c++/9/bits/char_traits.h:39,
+                   from /usr/include/c++/9/ios:40,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/stl_iterator.h:423:5: note: candidate: ‘template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)’
+    423 |     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/stl_iterator.h:423:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   ‘myArray’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/bits/stl_algobase.h:67,
+                   from /usr/include/c++/9/bits/char_traits.h:39,
+                   from /usr/include/c++/9/ios:40,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/stl_iterator.h:1219:5: note: candidate: ‘template<class _Iterator> std::move_iterator<_IteratorL> std::operator+(typename std::move_iterator<_IteratorL>::difference_type, const std::move_iterator<_IteratorL>&)’
+   1219 |     operator+(typename move_iterator<_Iterator>::difference_type __n,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/stl_iterator.h:1219:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   ‘myArray’ is not derived from ‘const std::move_iterator<_IteratorL>’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6020:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+   6020 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6020:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:56,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.tcc:1158:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+   1158 |     operator+(const _CharT* __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.tcc:1158:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const _CharT*’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:56,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.tcc:1174:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+   1174 |     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.tcc:1174:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   ‘myArray’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6057:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
+   6057 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6057:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6073:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)’
+   6073 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6073:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6085:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+   6085 |     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6085:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6091:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)’
+   6091 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6091:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6097:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)’
+   6097 |     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6097:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6109:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)’
+   6109 |     operator+(const _CharT* __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6109:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘const _CharT*’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6115:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)’
+   6115 |     operator+(_CharT __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6115:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   ‘myArray’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6121:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _CharT*)’
+   6121 |     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6121:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |           ^
+  In file included from /usr/include/c++/9/string:55,
+                   from /usr/include/c++/9/bits/locale_classes.h:40,
+                   from /usr/include/c++/9/bits/ios_base.h:41,
+                   from /usr/include/c++/9/ios:42,
+                   from /usr/include/c++/9/ostream:38,
+                   from /usr/include/c++/9/iostream:39,
+                   from myArray.cpp:1:
+  /usr/include/c++/9/bits/basic_string.h:6127:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, _CharT)’
+   6127 |     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+        |     ^~~~~~~~
+  /usr/include/c++/9/bits/basic_string.h:6127:5: note:   template argument deduction/substitution failed:
+  myArray.cpp:116:11: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+    116 |   d = 5 + d ;
+        |       
 
 
 2020/11/23 10:17:55

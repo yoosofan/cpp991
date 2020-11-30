@@ -113,8 +113,9 @@ void f1(void){
   cout << d[1] << endl;
   d[1] = 15;
   d = d + 5 ;
-  // d.print();  cout << d << endl;
-  cout << "before call f2" << endl;
+  d = 5 + d ;
+  d.print();  // cout << d << endl;
+  //cout << "before call f2" << endl;
   //f2(p);
 }
 void f2(myArray k){
