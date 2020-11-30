@@ -93,7 +93,7 @@ class myArray{
     return c;
   }
   double& operator[](int index){
-    if(index >= 0){
+    if(index >= n){
       cout << "index out of range: " << index << endl;
       index = 0;
       exit(0);

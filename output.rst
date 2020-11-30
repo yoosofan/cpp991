@@ -1,8 +1,15 @@
 
 .. code:: sh
 
+  cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out 
-  index out of range: 1
+  12
+  operator + in myArray
+  Assignment myArray
+  Destructor
+  Destructor
+  before call f2
+  Destructor
   cpp991$ 
 
 
