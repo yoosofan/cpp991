@@ -1,10 +1,8 @@
 
 .. code:: sh
 
-  cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out 
-  index out of range
-  cpp991$ ^C
+  index out of range: 1
   cpp991$ 
 
 
