@@ -36,12 +36,8 @@
   myArray.cpp:6:10: note: declared private here
       6 |   double a[MAX];
         |          ^
-  myArray.cpp: In function ‘void f1()’:
-  myArray.cpp:118:25: error: ‘class myArray’ has no member named ‘operator+’; did you mean ‘operator=’?
-    118 |   d.operator=(d.operator+(5));
-        |                         ^
-        |                         operator=
   cpp991$ 
+
 
 
 2020/11/23 10:17:55
