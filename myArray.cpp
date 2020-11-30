@@ -92,6 +92,7 @@ class myArray{
     }
     return a[index];
   }
+  friend myArray operator+(const myArray& a, const myArray& b);
 };
 myArray operator+(const myArray& a, const myArray& b);
 void f1(void);
