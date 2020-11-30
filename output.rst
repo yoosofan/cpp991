@@ -1,12 +1,10 @@
-2020/11/30 10:20:34
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  myArray.cpp: In constructor ‘myArray::myArray(double)’:
-  myArray.cpp:32:21: error: incompatible types in assignment of ‘double*’ to ‘double [100]’
-     32 |     a = new double[1];
-        |                     ^
+  cpp991$ ./a.out 
+  index out of range
+  cpp991$ ^C
   cpp991$ 
 
 
