@@ -108,6 +108,7 @@ void f1(void){
   myArray d(x, sizeof(x) / sizeof(double));
   cout << d[1] << endl;
   d[1] = 15;
+  d = d + 5 ;
   // d.print();  cout << d << endl;
   cout << "before call f2" << endl;
   //f2(p);
