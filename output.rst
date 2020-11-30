@@ -1,20 +1,29 @@
 
 .. code:: sh
 
+  cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out 
   12
+  Assignment myArray
   operator + in myArray
   Assignment myArray
   Destructor
   Destructor
+  Assignment myArray
   operator + in myArray
   Assignment myArray
   Destructor
   Destructor
-   n = 1
+   n = 4
   a[0] = 20
-  n = 1
+  a[1] = 15
+  a[2] = 34
+  a[3] = 54
+  n = 4
   a[0]= 20
+  a[1]= 15
+  a[2]= 34
+  a[3]= 54
 
   Destructor
   cpp991$ 

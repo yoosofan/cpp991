@@ -110,8 +110,9 @@ int main(){
 }
 myArray operator+(const myArray& a, const myArray& b){
     myArray c;
-    c.n = b.n;
-    for(int i = 0; i < b.n; i++ )
+    c = a.n > b.n ? a : b;
+    int min = a.n < b.n ? a.n : b.n;
+    for(int i = 0; i < min; i++ )
       c.a[i] = a.a[i] + b.a[i];
     cout << "operator + in myArray" << endl;
     return c;
