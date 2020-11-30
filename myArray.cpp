@@ -103,7 +103,7 @@ int main(){
 myArray operator+(const myArray& a, const myArray& b){
     myArray c;
     c.n = b.n;
-    for(int i = 0; i < this -> n; i++ )
+    for(int i = 0; i < b.n; i++ )
       c.a[i] = a.a[i] + b.a[i];
     cout << "operator + in myArray" << endl;
     return c;

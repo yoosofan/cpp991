@@ -15,9 +15,12 @@
   myArray.cpp:7:7: note: declared private here
       7 |   int n;
         |       ^
-  myArray.cpp:106:24: error: invalid use of ‘this’ in non-member function
-    106 |     for(int i = 0; i < this -> n; i++ )
-        |                        ^~~~
+  myArray.cpp:106:26: error: ‘int myArray::n’ is private within this context
+    106 |     for(int i = 0; i < b.n; i++ )
+        |                          ^
+  myArray.cpp:7:7: note: declared private here
+      7 |   int n;
+        |       ^
   myArray.cpp:107:9: error: ‘double myArray::a [100]’ is private within this context
     107 |       c.a[i] = a.a[i] + b.a[i];
         |         ^
@@ -37,7 +40,6 @@
       6 |   double a[MAX];
         |          ^
   cpp991$ 
-
 
 
 2020/11/23 10:17:55
