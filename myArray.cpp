@@ -27,6 +27,11 @@ class myArray{
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
   }
+  myArray(double x){
+    n = 1;
+    a = new double[1];
+    a[o] = x;
+  }
   myArray(const myArray& b){
     cout << "copy construcotr" << endl;
     copy(b);
