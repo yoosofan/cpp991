@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 class myArray{
   static const int MAX = 100;
@@ -91,6 +92,7 @@ class myArray{
     if(index >= 0){
       cout << "index out of range" << endl;
       index = 0;
+      exit(0);
     }
     return a[index];
   }
