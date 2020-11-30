@@ -1,7 +1,6 @@
 
 .. code:: sh
 
-  cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out 
   12
   operator + in myArray
@@ -14,6 +13,9 @@
   Destructor
    n = 1
   a[0] = 20
+  n = 1
+  a[0]= 20
+
   Destructor
   cpp991$ 
 

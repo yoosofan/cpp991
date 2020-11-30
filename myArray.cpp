@@ -125,7 +125,8 @@ void f1(void){
   d = d + 5 ; 
   // d.operator=(d.operator+(5));
   d = 5 + d ;
-  d.print();  // cout << d << endl;
+  d.print();
+  cout << d << endl;
   //cout << "before call f2" << endl;
   //f2(p);
 }
