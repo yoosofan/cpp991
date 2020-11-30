@@ -93,7 +93,14 @@ class myArray{
     return a[index];
   }
   friend myArray operator+(const myArray& a, const myArray& b);
+  friend ostream& operator<<(ostream& out1, const myArray& b);
 };
+ostream& operator<<(ostream& out1, const myArray& b){
+  out1 << "n = " << b.n << endl;
+  for(int i = 0; i < b.n ; i++)
+    out1 << "a[" << i << "]= " << b.a[i] << endl;
+  return out1;
+}
 myArray operator+(const myArray& a, const myArray& b);
 void f1(void);
 void f2(myArray);
