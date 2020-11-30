@@ -48,14 +48,6 @@ class myArray{
     copy(b);
     return *this;
   }
-  myArray operator+(const myArray& b) const{
-    myArray c;
-    c.n = b.n;
-    for(int i = 0; i < this -> n; i++ )
-      c.a[i] = a[i] + b.a[i];
-    cout << "operator + in myArray" << endl;
-    return c;
-  }
   myArray operator-(const myArray& b) const{
     myArray c;
     c.n = b.n;
@@ -101,12 +93,22 @@ class myArray{
     return a[index];
   }
 };
+myArray operator+(const myArray& a, const myArray& b);
 void f1(void);
 void f2(myArray);
 int main(){
   f1();
   return 0;
 }
+myArray operator+(const myArray& a, const myArray& b){
+    myArray c;
+    c.n = b.n;
+    for(int i = 0; i < this -> n; i++ )
+      c.a[i] = a.a[i] + b.a[i];
+    cout << "operator + in myArray" << endl;
+    return c;
+  }
+
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
@@ -114,7 +116,7 @@ void f1(void){
   d[1] = 15;
   d = d + 5 ; 
   d.operator=(d.operator+(5));
-  //d = 5 + d ;
+  d = 5 + d ;
   d.print();  // cout << d << endl;
   //cout << "before call f2" << endl;
   //f2(p);
