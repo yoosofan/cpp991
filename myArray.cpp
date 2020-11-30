@@ -87,7 +87,7 @@ class myArray{
       a[i] ++;
     return c;
   }
-  double operator[](int index){
+  double& operator[](int index){
     if(index >= 0){
       cout << "index out of range" << endl;
       index = 0;

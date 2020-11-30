@@ -1,12 +1,14 @@
-2020/11/30 10:06:57
+2020/11/30 10:11:20
 
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  myArray.cpp: In function ‘void f1()’:
-  myArray.cpp:108:10: error: lvalue required as left operand of assignment
-    108 |   d[1] = 15;
-        |          ^~
+  cpp991$ ./a.out 
+  index out of range
+  10
+  index out of range
+  before call f2
+  Destructor
   cpp991$ 
 
 
