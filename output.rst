@@ -19,12 +19,22 @@
   a[1] = 15
   a[2] = 34
   a[3] = 54
+  copy construcotr
   n = 4
   a[0]= 20
   a[1]= 15
   a[2]= 34
   a[3]= 54
 
+  Destructor
+  copy construcotr
+  n = 4
+  a[0]= 18
+  a[1]= 13
+  a[2]= 32
+  a[3]= 52
+
+  Destructor
   Destructor
   cpp991$ 
 

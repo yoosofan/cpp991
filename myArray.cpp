@@ -59,6 +59,17 @@ class myArray{
       a[i]++;
     return *this;
   }
+  myArray operator--(int){
+    myArray c(*this);
+    for(int i = 0; i < n; i++)
+      a[i] --;
+    return c;
+  }
+  myArray operator--(){
+    for(int i = 0; i < n; i++)
+      a[i]--;
+    return *this;
+  }
   myArray operator++(int){
     myArray c(*this);
     for(int i = 0; i < n; i++)
@@ -130,7 +141,8 @@ void f1(void){
   // d.operator=(d.operator+(5));
   d = 5 + d ;
   d.print();
-  cout << d << endl;
+  cout << d -- << endl;
+  cout << -- d << endl;
   // operator<<(operator<<(cout, d), endl);
 
   //cout << "before call f2" << endl;
