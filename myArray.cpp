@@ -48,14 +48,6 @@ class myArray{
     copy(b);
     return *this;
   }
-  myArray operator-(const myArray& b) const{
-    myArray c;
-    c.n = b.n;
-    for(int i = 0; i < this -> n; i++ )
-      c.a[i] = a[i] - b.a[i];
-    cout << "operator - in myArray" << endl;
-    return c;
-  }
   myArray operator-(void) const{
     myArray c(*this);
     for(int i=0; i<n; i++)
@@ -84,7 +76,17 @@ class myArray{
   friend myArray operator+(const myArray& a, const myArray& b);
   friend ostream& operator<<(ostream& out1, const myArray& b);
   friend bool operator==(const myArray& a, const myArray& b);
+  friend myArray operator-(const myArray& b, const myArray& b);
 };
+myArray operator-(const myArray& b, const myArray& b){
+  myArray c;
+  c.n = b.n;
+  for(int i = 0; i < a.n; i++ )
+    c.a[i] = a.a[i] - b.a[i];
+  cout << "operator - in myArray" << endl;
+  return c;
+}
+
 bool operator==(const myArray& a, const myArray& b){ // < > <= >= != 
   bool retVal = false;
   int i = 0;

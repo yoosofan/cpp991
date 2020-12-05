@@ -2,31 +2,23 @@
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
-  cpp991$ ./a.out
-  12
-  Assignment myArray
-  operator + in myArray
-  Assignment myArray
-  Destructor
-  Destructor
-  Assignment myArray
-  operator + in myArray
-  Assignment myArray
-  Destructor
-  Destructor
-   n = 4
-  a[0] = 20
-  a[1] = 15
-  a[2] = 34
-  a[3] = 54
-  n = 4
-  a[0]= 20
-  a[1]= 15
-  a[2]= 34
-  a[3]= 54
-
-  Destructor
-  2 2 cpp991$ 
+  myArray.cpp:79:61: error: redefinition of ‘const myArray& b’
+     79 |   friend myArray operator-(const myArray& b, const myArray& b);
+        |                                              ~~~~~~~~~~~~~~~^
+  myArray.cpp:79:43: note: ‘const myArray& b’ previously declared here
+     79 |   friend myArray operator-(const myArray& b, const myArray& b);
+        |                            ~~~~~~~~~~~~~~~^
+  myArray.cpp:81:52: error: redefinition of ‘const myArray& b’
+     81 | myArray operator-(const myArray& b, const myArray& b){
+        |                                     ~~~~~~~~~~~~~~~^
+  myArray.cpp:81:34: note: ‘const myArray& b’ previously declared here
+     81 | myArray operator-(const myArray& b, const myArray& b){
+        |                   ~~~~~~~~~~~~~~~^
+  myArray.cpp: In function ‘myArray operator-(const myArray&)’:
+  myArray.cpp:84:22: error: ‘a’ was not declared in this scope
+     84 |   for(int i = 0; i < a.n; i++ )
+        |                      ^
+  cpp991$ 
 
 
 
