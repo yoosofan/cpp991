@@ -22,7 +22,7 @@ class myArray{
     cout << "Error accessing myArray " << endl;
   }
   myArray(const double *a=nullptr, int n=0){
-    if( n > MAX ) 
+    if( n > MAX )
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
@@ -53,6 +53,19 @@ class myArray{
     for(int i=0; i<n; i++)
       c.a[i] = - c.a[i];
     return c;
+  }
+  bool operator!(void) const{
+    bool retVal = true;
+    if( ! n ) // n != 0
+      retVal = false;
+    else{
+      for(int i=0; i<n; i++)
+        if( a[i] != 0 )
+          break;
+      if( i < n )
+        retVal = false;
+    }
+    return retVal;
   }
   myArray operator++(){
     for(int i = 0; i < n; i++)
@@ -99,7 +112,7 @@ myArray operator-(const myArray& a, const myArray& b){
   return c;
 }
 
-bool operator==(const myArray& a, const myArray& b){ // < > <= >= != 
+bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
   if(a.n == b.n)
@@ -152,7 +165,7 @@ void f1(void){
   myArray d(x, sizeof(x) / sizeof(double));
   cout << d[1] << endl;
   d[1] = 15;
-  d = d + 5 ; 
+  d = d + 5 ;
   // d.operator=(d.operator+(5));
   d = 5 + d ;
   d.print();
