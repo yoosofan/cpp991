@@ -174,8 +174,8 @@ void f1(void){
   cout << "-- d " << endl << -- d << endl;
   // operator<<(operator<<(cout, d), endl);
 
-  //cout << "before call f2" << endl;
-  //f2(p);
+  cout << "before call f2" << endl;
+  f2(d);
 }
 void f2(myArray k){
   k.print();

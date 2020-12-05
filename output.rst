@@ -37,6 +37,17 @@
   a[3]= 52
 
   Destructor
+  before call f2
+  copy construcotr
+   n = 4
+  a[0] = 18
+  a[1] = 13
+  a[2] = 32
+  a[3] = 52
+  k is not empty (k.n != 0 and exists i for k.a[i] != 0 ) 
+  b is empty (b.n == 0 or all b.a[i] == 0 ) 
+  Destructor
+  Destructor
   Destructor
   cpp991$ 
 
