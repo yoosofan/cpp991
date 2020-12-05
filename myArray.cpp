@@ -88,7 +88,7 @@ class myArray{
   friend ostream& operator<<(ostream& out1, const myArray& b);
   friend bool operator==(const myArray& a, const myArray& b);
   friend myArray operator-(const myArray& a, const myArray& b);
-  friend istream& operator>>(istream& in1, const myArray& b);
+  friend istream& operator>>(istream& in1, myArray& b);
 };
 myArray operator-(const myArray& a, const myArray& b){
   myArray c;
