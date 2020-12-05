@@ -56,8 +56,8 @@ class myArray{
   }
   bool operator!(void) const{
     bool retVal = true;
-    if( ! n ) // n != 0
-      retVal = false;
+    if( ! n ) // n == 0
+      retVal = true;
     else{
       for(int i=0; i<n; i++)
         if( a[i] != 0 )
