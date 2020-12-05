@@ -109,8 +109,8 @@ void f1(void);
 void f2(myArray);
 int main(){
   f1();
-  cout << "2 " ;
-  operator<<(cout, "2 ");
+  cout << "2 " << endl;
+  operator<<(operator<<(cout, "2 "), endl);
   
   return 0;
 }
