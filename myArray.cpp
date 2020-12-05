@@ -59,7 +59,8 @@ class myArray{
     if( ! n ) // n == 0
       retVal = true;
     else{
-      for(int i=0; i<n; i++)
+      int i = 0;
+      for(; i < n; i++)
         if( a[i] != 0 )
           break;
       if( i < n )
