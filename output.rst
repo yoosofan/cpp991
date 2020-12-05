@@ -1,11 +1,32 @@
 
 .. code:: sh
 
-  myArray.cpp: In function ‘bool operator==(const myArray&, const myArray&)’:
-  myArray.cpp:92:20: error: ‘n’ was not declared in this scope
-     92 |     for(i = 0; i < n; i++)
-        |                    ^
-  cpp991$ 
+  cpp991$ g++ myArray.cpp 
+  cpp991$ ./a.out
+  12
+  Assignment myArray
+  operator + in myArray
+  Assignment myArray
+  Destructor
+  Destructor
+  Assignment myArray
+  operator + in myArray
+  Assignment myArray
+  Destructor
+  Destructor
+   n = 4
+  a[0] = 20
+  a[1] = 15
+  a[2] = 34
+  a[3] = 54
+  n = 4
+  a[0]= 20
+  a[1]= 15
+  a[2]= 34
+  a[3]= 54
+
+  Destructor
+  2 2 cpp991$ 
 
 
 

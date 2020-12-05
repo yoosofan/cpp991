@@ -89,7 +89,7 @@ bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
   if(a.n == b.n)
-    for(i = 0; i < n; i++)
+    for(i = 0; i < a.n; i++)
       if(a.a[i] != b.a[i])
         break;
   if(i == a.n)
