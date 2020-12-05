@@ -178,4 +178,13 @@ void f1(void){
 }
 void f2(myArray k){
   k.print();
+  if( !k )
+    cout << "k is empty (k.n == 0 or all k.a[i] == 0 ) " << endl;
+  else
+    cout << "k is not empty (k.n != 0 and exists i for k.a[i] != 0 ) " << endl;
+  myArray b;
+  if( !b )
+    cout << "b is empty (b.n == 0 or all b.a[i] == 0 ) " << endl;
+  else
+    cout << "b is not empty (b.n != 0 and exists i for b.a[i] != 0 ) " << endl;  
 }
