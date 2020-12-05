@@ -62,17 +62,6 @@ class myArray{
       c.a[i] = - c.a[i];
     return c;
   }
-  bool operator==(const myArray& b) const { // < > <= >= != 
-    bool retVal = false;
-    int i = 0;
-    if(n == b.n)
-      for(i = 0; i < n; i++)
-        if(a[i] != b.a[i])
-          break;
-    if(i == n)
-      retVal = true;
-    return retVal;
-  }
   myArray operator++(){
     for(int i = 0; i < n; i++)
       a[i]++;
@@ -94,7 +83,19 @@ class myArray{
   }
   friend myArray operator+(const myArray& a, const myArray& b);
   friend ostream& operator<<(ostream& out1, const myArray& b);
+  friend bool operator==(const myArray& a, const myArray& b);
 };
+bool operator==(const myArray& a, const myArray& b){ // < > <= >= != 
+  bool retVal = false;
+  int i = 0;
+  if(a.n == b.n)
+    for(i = 0; i < n; i++)
+      if(a.a[i] != b.a[i])
+        break;
+  if(i == a.n)
+    retVal = true;
+  return retVal;
+}
 ostream& operator<<(ostream& out1, const myArray& b){
   out1 << "n = " << b.n << endl;
   for(int i = 0; i < b.n ; i++)
