@@ -109,6 +109,15 @@ bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
     retVal = true;
   return retVal;
 }
+
+istream& operator>>(istream& in1, const myArray& b){
+  cout << "Enter n ";
+  delete[] b.a;
+  b.a = nullptr;
+  b.n = 0;
+  in1 >> b.n;
+  
+
 ostream& operator<<(ostream& out1, const myArray& b){
   out1 << "n = " << b.n << endl;
   for(int i = 0; i < b.n ; i++)
