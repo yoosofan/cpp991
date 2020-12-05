@@ -109,9 +109,6 @@ void f1(void);
 void f2(myArray);
 int main(){
   f1();
-  cout << "2 " << endl;
-  operator<<(operator<<(cout, "2 "), endl);
-  
   return 0;
 }
 myArray operator+(const myArray& a, const myArray& b){
@@ -134,6 +131,8 @@ void f1(void){
   d = 5 + d ;
   d.print();
   cout << d << endl;
+  operator<<(operator<<(cout, d), endl);
+
   //cout << "before call f2" << endl;
   //f2(p);
 }
