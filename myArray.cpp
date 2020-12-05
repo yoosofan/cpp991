@@ -131,7 +131,7 @@ void f1(void){
   d = 5 + d ;
   d.print();
   cout << d << endl;
-  operator<<(operator<<(cout, d), endl);
+  // operator<<(operator<<(cout, d), endl);
 
   //cout << "before call f2" << endl;
   //f2(p);
