@@ -88,6 +88,7 @@ class myArray{
   friend ostream& operator<<(ostream& out1, const myArray& b);
   friend bool operator==(const myArray& a, const myArray& b);
   friend myArray operator-(const myArray& a, const myArray& b);
+  friend istream& operator>>(istream& in1, const myArray& b);
 };
 myArray operator-(const myArray& a, const myArray& b){
   myArray c;
@@ -111,16 +112,18 @@ bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
 }
 
 istream& operator>>(istream& in1, const myArray& b){
-  cout << "Enter n ";
   delete[] b.a;
   b.a = nullptr;
   b.n = 0;
+  cout << "Enter n ";
   in1 >> b.n;
   b.a = new double[b.n];
   for(int i = 0; i < b.n; i++){
     cout << "Enter a["<< i << "]: ";
     in1 >> b.a[i];
-  
+  }
+  return in1;
+}
 
 ostream& operator<<(ostream& out1, const myArray& b){
   out1 << "n = " << b.n << endl;
