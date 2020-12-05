@@ -76,9 +76,9 @@ class myArray{
   friend myArray operator+(const myArray& a, const myArray& b);
   friend ostream& operator<<(ostream& out1, const myArray& b);
   friend bool operator==(const myArray& a, const myArray& b);
-  friend myArray operator-(const myArray& b, const myArray& b);
+  friend myArray operator-(const myArray& a, const myArray& b);
 };
-myArray operator-(const myArray& b, const myArray& b){
+myArray operator-(const myArray& a, const myArray& b){
   myArray c;
   c.n = b.n;
   for(int i = 0; i < a.n; i++ )
