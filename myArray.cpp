@@ -141,8 +141,8 @@ void f1(void){
   // d.operator=(d.operator+(5));
   d = 5 + d ;
   d.print();
-  cout << d -- << endl;
-  cout << -- d << endl;
+  cout << "d -- " << endl << d -- << endl;
+  cout << "-- d " << endl << -- d << endl;
   // operator<<(operator<<(cout, d), endl);
 
   //cout << "before call f2" << endl;

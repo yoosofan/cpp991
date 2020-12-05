@@ -19,6 +19,7 @@
   a[1] = 15
   a[2] = 34
   a[3] = 54
+  d -- 
   copy construcotr
   n = 4
   a[0]= 20
@@ -27,6 +28,7 @@
   a[3]= 54
 
   Destructor
+  -- d 
   copy construcotr
   n = 4
   a[0]= 18
