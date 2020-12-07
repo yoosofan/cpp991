@@ -26,12 +26,11 @@ class myArray{
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
-    if( n == 1 )
-      cout << "construcotr myArray: " << a[0] << endl;
   }
   myArray(double x){
     n = 1;
     a[0] = x;
+    cout << "construcotr myArray: " << a[0] << endl;
   }
   myArray(const myArray& b){
     cout << "copy construcotr" << endl;

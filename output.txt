@@ -1,4 +1,5 @@
 12
+construcotr myArray: 5
 Assignment myArray
 operator + in myArray
 In + 
@@ -11,6 +12,7 @@ a[3]= 54
 Assignment myArray
 Destructor
 Destructor
+construcotr myArray: 5
 Assignment myArray
 operator + in myArray
 In + 
