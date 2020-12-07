@@ -3,6 +3,8 @@
   git config --global user.name "نام و نام خانوادگی شما"
   git config --global user.email "رایانامه‌ی شما"
 
+  git config --global user.name "Ahmad Yoosofan"
+  git config --global user.email "yoosofan@gmx.com"
 
 .. code:: sh
 
