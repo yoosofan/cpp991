@@ -27,7 +27,7 @@ class myArray{
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
   }
-  myArray(double x){
+  explicit myArray(double x){
     n = 1;
     a[0] = x;
     cout << "construcotr myArray: " << a[0] << endl;
