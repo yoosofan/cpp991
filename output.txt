@@ -1,0 +1,26 @@
+12
+Assignment myArray
+operator + in myArray
+In + 
+n = 4
+a[0]= 15
+a[1]= 15
+a[2]= 34
+a[3]= 54
+
+Assignment myArray
+Destructor
+Destructor
+Assignment myArray
+operator + in myArray
+In + 
+n = 4
+a[0]= 20
+a[1]= 15
+a[2]= 34
+a[3]= 54
+
+Assignment myArray
+Destructor
+Destructor
+Destructor

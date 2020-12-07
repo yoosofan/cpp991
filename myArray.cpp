@@ -26,6 +26,8 @@ class myArray{
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
+    if( n == 1 )
+      cout << "construcotr myArray: " << a[0] << endl;
   }
   myArray(double x){
     n = 1;
@@ -158,6 +160,7 @@ myArray operator+(const myArray& a, const myArray& b){
     for(int i = 0; i < min; i++ )
       c.a[i] = a.a[i] + b.a[i];
     cout<< "operator + in myArray" << endl;
+    cout << "In + " << endl << c << endl;
     return c;
   }
 
@@ -169,13 +172,13 @@ void f1(void){
   d = d + 5 ;
   // d.operator=(d.operator+(5));
   d = 5 + d ;
-  d.print();
-  cout << "d -- " << endl << d -- << endl;
-  cout << "-- d " << endl << -- d << endl;
+  // d.print();
+  // cout << "d -- " << endl << d -- << endl;
+  // cout << "-- d " << endl << -- d << endl;
   // operator<<(operator<<(cout, d), endl);
 
-  cout << "before call f2" << endl;
-  f2(d);
+  // cout << "before call f2" << endl;
+  // f2(d);
 }
 void f2(myArray k){
   k.print();
