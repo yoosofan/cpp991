@@ -131,9 +131,9 @@ istream& operator>>(istream& in1, myArray& b){
   b.n = 0;
   cout << "Enter n ";
   in1 >> b.n;
-  while( b.n < 0 || b.n > myArray.MAX ){
+  while( b.n < 0 || b.n > myArray::MAX ){
     cout << "number of element must be greater than 0 and less than  " 
-      << myArray.MAX << endl;
+      << myArray::MAX << endl;
     in1 >> b.n;
   }
   // b.a = new double[b.n];

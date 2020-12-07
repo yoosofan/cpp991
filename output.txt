@@ -1,9 +1,24 @@
-cpp991$ g++ myArray.cpp 
-myArray.cpp: In function ‘std::istream& operator>>(std::istream&, myArray&)’:
-myArray.cpp:134:34: error: expected primary-expression before ‘.’ token
-  134 |   while( b.n < 0 || b.n > myArray.MAX ){
-      |                                  ^
-myArray.cpp:136:17: error: expected primary-expression before ‘.’ token
-  136 |       << myArray.MAX << endl;
-      |                 ^
-cpp991$ 
+Enter n Enter a[0]: Enter a[1]: 5
+construcotr myArray: 5
+Assignment myArray
+operator + in myArray
+In + 
+n = 2
+a[0]= 9
+a[1]= 15
+
+Assignment myArray
+Destructor
+Destructor
+construcotr myArray: 5
+Assignment myArray
+operator + in myArray
+In + 
+n = 2
+a[0]= 14
+a[1]= 15
+
+Assignment myArray
+Destructor
+Destructor
+Destructor
