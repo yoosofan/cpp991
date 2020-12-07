@@ -131,11 +131,18 @@ istream& operator>>(istream& in1, myArray& b){
   b.n = 0;
   cout << "Enter n ";
   in1 >> b.n;
-  // b.a = new double[b.n];
-  for(int i = 0; i < b.n; i++){
-    cout << "Enter a["<< i << "]: ";
-    in1 >> b.a[i];
+  while( b.n < 0 || b.n > myArray.MAX ){
+    cout << "number of element must be greater than 0 and less than  " 
+      << myArray.MAX << endl;
+    in1 >> b.n;
   }
+  // b.a = new double[b.n];
+  if( b.n )
+    for(int i = 0; i < b.n; i++){
+      cout << "Enter a["<< i << "]: ";
+      in1 >> b.a[i];
+    }
+  // else b.a = nullptr;
   return in1;
 }
 
@@ -166,6 +173,7 @@ myArray operator+(const myArray& a, const myArray& b){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
+  cin >> d ;
   cout << d[1] << endl;
   d[1] = 15;
   d = d + myArray(5) ;

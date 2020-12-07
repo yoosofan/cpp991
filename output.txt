@@ -1,28 +1,9 @@
-12
-construcotr myArray: 5
-Assignment myArray
-operator + in myArray
-In + 
-n = 4
-a[0]= 15
-a[1]= 15
-a[2]= 34
-a[3]= 54
-
-Assignment myArray
-Destructor
-Destructor
-construcotr myArray: 5
-Assignment myArray
-operator + in myArray
-In + 
-n = 4
-a[0]= 20
-a[1]= 15
-a[2]= 34
-a[3]= 54
-
-Assignment myArray
-Destructor
-Destructor
-Destructor
+cpp991$ g++ myArray.cpp 
+myArray.cpp: In function ‘std::istream& operator>>(std::istream&, myArray&)’:
+myArray.cpp:134:34: error: expected primary-expression before ‘.’ token
+  134 |   while( b.n < 0 || b.n > myArray.MAX ){
+      |                                  ^
+myArray.cpp:136:17: error: expected primary-expression before ‘.’ token
+  136 |       << myArray.MAX << endl;
+      |                 ^
+cpp991$ 
