@@ -1,5 +1,11 @@
 .. code:: sh
 
+  git config --global user.name "نام و نام خانوادگی شما"
+  git config --global user.email "رایانامه‌ی شما"
+
+
+.. code:: sh
+
   cpp991$ g++ myArray.cpp 
   cpp991$ ./a.out > output.txt
   2
@@ -16,6 +22,7 @@
   ./a.out > output.txt
   ./a.out > output.txt  < input.txt
   cpp991$ ./a.out < input.txt > output.txt
+
 
 
 
