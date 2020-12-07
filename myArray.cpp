@@ -170,7 +170,7 @@ void f1(void){
   d[1] = 15;
   d = d + myArray(5) ;
   // d.operator=(d.operator+(5));
-  d = 5 + d ;
+  d = myArray(5) + d ;
   // d.print();
   // cout << "d -- " << endl << d -- << endl;
   // cout << "-- d " << endl << -- d << endl;
