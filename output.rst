@@ -15,6 +15,9 @@
 
   ./a.out > output.txt
   ./a.out > output.txt  < input.txt
+  cpp991$ ./a.out < input.txt > output.txt
+
+
 
 
 2020/11/23 10:17:55
