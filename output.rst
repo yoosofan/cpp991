@@ -6,6 +6,8 @@
   git config --global user.name "Ahmad Yoosofan"
   git config --global user.email "yoosofan@gmx.com"
 
+  git clone https://github.com/yoosofan/cpp991.git
+
 .. code:: sh
 
   cpp991$ g++ myArray.cpp 
