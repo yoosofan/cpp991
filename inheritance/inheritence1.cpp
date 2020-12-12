@@ -3,10 +3,6 @@ using namespace std;
 class Shape{
   string name;// char name[100]; '\0' رشته
   string color;// strcpy, strcmp; char*color; str1=str2
-  // class myString{ operator=  + len , .....
-  // class stack;
-  // class queue
-  // class list
 public:
   int Area(void){return 0;}
 };
@@ -18,8 +14,8 @@ public:
 };
 int main(){
   Shape s;
-  cout<<s.Area()<<endl;
+  cout<< s.Area() << endl;
   Square sq(3);
-  cout<<sq.Area()<<endl;
+  cout<< sq.Area() << endl;
   return 0;
 }
