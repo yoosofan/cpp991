@@ -1,0 +1,5 @@
+inheritance$ g++ inheritance110.cpp 
+inheritance$ ./a.out 
+0
+9
+inheritance$ 
