@@ -6,3 +6,7 @@
 .. title: Operating Systems - Memory  (By Ahmad Yoosofan)
 
 :slide-numbers: true
+
+----
+
+.. include:: inheri
