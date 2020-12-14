@@ -1,0 +1,8 @@
+inheritance$ g++ inheritance120.cpp 
+inheritance$ ./a.out
+18s.Area(): 0
+20sq.Area(): 9
+22ps.Area(): 0
+24ps.Area(): 0
+inheritance$ geany inheritance120_out.txt
+inheritance$ 

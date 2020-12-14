@@ -15,13 +15,13 @@ public:
 };
 int main(){
   Shape s;
-  cout << s.Area() << endl;
+  cout << __LINE__ << "s.Area(): " << s.Area() << endl;
   Square sq(3);
-  cout<< sq.Area() << endl;
+  cout<< __LINE__ << "sq.Area(): " << sq.Area() << endl;
   Shape *ps = &s; 
-  cout << ps->Area() << endl;
+  cout << __LINE__ << "ps.Area(): " << ps->Area() << endl;
   ps = &sq; 
-  cout << ps->Area() << endl;
+  cout << __LINE__ << "ps.Area(): " << ps->Area() << endl;
   A *pa;
   return 0;
 }
