@@ -1,0 +1,20 @@
+inheritance130.cpp: In function ‘int main()’:
+inheritance130.cpp:19:17: error: ‘int Shape::Area()’ is protected within this context
+   19 |   cout <<s.Area() << endl;
+      |                 ^
+inheritance130.cpp:9:7: note: declared protected here
+    9 |   int Area(void){return 0;}
+      |       ^~~~
+inheritance130.cpp:23:20: error: ‘int Shape::Area()’ is protected within this context
+   23 |   cout << ps->Area() << endl;
+      |                    ^
+inheritance130.cpp:9:7: note: declared protected here
+    9 |   int Area(void){return 0;}
+      |       ^~~~
+inheritance130.cpp:25:18: error: ‘int Shape::Area()’ is protected within this context
+   25 |   cout<<ps->Area()<<endl;
+      |                  ^
+inheritance130.cpp:9:7: note: declared protected here
+    9 |   int Area(void){return 0;}
+      |       ^~~~
+inheritance$ 
