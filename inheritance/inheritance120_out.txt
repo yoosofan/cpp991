@@ -1,8 +1,7 @@
 inheritance$ g++ inheritance120.cpp 
 inheritance$ ./a.out
-18s.Area(): 0
-20sq.Area(): 9
-22ps.Area(): 0
-24ps.Area(): 0
-inheritance$ geany inheritance120_out.txt
-inheritance$ 
+18:	 s.Area(): 0
+20:	 sq.Area(): 9
+22:	 ps.Area(): 0
+24:	 ps.Area(): 0
+inheritance$ geany inheritance
