@@ -1,0 +1,8 @@
+inheritance190.cpp: In function ‘int main()’:
+inheritance190.cpp:22:23: error: ‘Shape’ is an inaccessible base of ‘Square’
+   22 |   Square sq(3);  f1(sq);
+      |                       ^
+inheritance190.cpp:19:15: note:   initializing argument 1 of ‘void f1(Shape)’
+   19 | void f1(Shape a){cout<<a.Area()<<endl;a.show();}
+      |         ~~~~~~^
+inheritance$ 
