@@ -1,0 +1,8 @@
+inheritance$ g++ inheritance180.cpp 
+inheritance$ ./a.out
+30	: 11	: in Shape
+0
+15	: show in shape
+40	: 11	: in Shape
+0
+inheritance$ 
