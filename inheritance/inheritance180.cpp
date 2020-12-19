@@ -1,6 +1,12 @@
 #include<iostream>
 using namespace std;
-class A{};
+class A{
+ public:
+  int Area(void){
+    cout << __LINE__ << "\t: " << "in A" << endl;
+    return 0;
+  }
+};
 
 class Shape: public A{
  protected:

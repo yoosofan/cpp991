@@ -1,13 +1,11 @@
+inheritance$ g++ inheritance180.cpp 
 inheritance180.cpp: In function ‘void f1(A)’:
-inheritance180.cpp:30:36: error: ‘class A’ has no member named ‘Area’
-   30 |   cout <<  __LINE__ << "\t: " << a.Area() << endl;
-      |                                    ^~~~
-inheritance180.cpp:31:5: error: ‘class A’ has no member named ‘show’
-   31 |   a.show();
+inheritance180.cpp:37:5: error: ‘class A’ has no member named ‘show’
+   37 |   a.show();
       |     ^~~~
 inheritance180.cpp: In function ‘int main()’:
-inheritance180.cpp:39:33: error: ‘sq’ was not declared in this scope; did you mean ‘s’?
-   39 |   cout << __LINE__ << "\t: " << sq.Area() << endl;
+inheritance180.cpp:45:33: error: ‘sq’ was not declared in this scope; did you mean ‘s’?
+   45 |   cout << __LINE__ << "\t: " << sq.Area() << endl;
       |                                 ^~
       |                                 s
 inheritance$ 
