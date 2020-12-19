@@ -10,4 +10,6 @@ inheritance$ ./a.out
 9
 51	: 21	: in Shape
 0
+53	: 21	: in Shape
+0
 inheritance$ 

@@ -49,8 +49,8 @@ int main(){
   cout << __LINE__ << "\t: " << sq.Area() << endl;
   Shape *ps = &s; 
   cout << __LINE__ << "\t: " << ps->Area() << endl;
-  //ps = &sq; 
-  // cout <<  __LINE__ << "\t: " << ps->Area() << endl;
+  ps = &sq; 
+  cout <<  __LINE__ << "\t: " << ps->Area() << endl;
   A *pa;
   return 0;
 }
