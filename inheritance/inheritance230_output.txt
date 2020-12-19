@@ -1,0 +1,8 @@
+inheritance$ g++ inheritance230.cpp 
+inheritance$ ./a.out
+0
+9
+0
+0
+name: square	color: blue	d: 3
+inheritance$ 
