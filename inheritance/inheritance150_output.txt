@@ -1,0 +1,13 @@
+inheritance$ g++ inheritance150.cpp 
+inheritance150.cpp:18:9: error: variable or field ‘f1’ declared void
+   18 | void f1(shape a){cout<<a.Area()<<endl;}
+      |         ^~~~~
+inheritance150.cpp:18:9: error: ‘shape’ was not declared in this scope; did you mean ‘Shape’?
+   18 | void f1(shape a){cout<<a.Area()<<endl;}
+      |         ^~~~~
+      |         Shape
+inheritance150.cpp: In function ‘int main()’:
+inheritance150.cpp:21:3: error: ‘f1’ was not declared in this scope
+   21 |   f1(s);
+      |   ^~
+inheritance$ 
