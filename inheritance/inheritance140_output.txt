@@ -1,0 +1,7 @@
+inheritance$ ./a.out
+19	: 0
+21	: 9
+23	: 0
+25	: 0
+inheritance$ 
+
