@@ -1,0 +1,13 @@
+inheritance$ g++ inheritance170.cpp 
+inheritance$ ./a.out
+24	: 10	: in Shape
+0
+24	: 10	: in Shape
+0
+31	: 18	: in Square
+9
+33	: 10	: in Shape
+0
+35	: 10	: in Shape
+0
+inheritance$ 
