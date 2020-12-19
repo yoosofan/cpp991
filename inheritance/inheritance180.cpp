@@ -36,22 +36,21 @@ public:
   Square(int d=1){this->d=d;}
 };
 
-void f1(Shape a){
+void f1(A *a){
   cout <<  __LINE__ << "\t: " << a.Area() << endl;
   a.show();
 }
 
 int main(){
-  A b;
   Shape s;  
-  f1(s);
+  f1(&s);
   Square sq(3);  
-  f1(b);
+  f1(&sq);
   cout << __LINE__ << "\t: " << sq.Area() << endl;
   Shape *ps = &s; 
   cout << __LINE__ << "\t: " << ps->Area() << endl;
-  //ps = &sq; 
-  // cout <<  __LINE__ << "\t: " << ps->Area() << endl;
+  ps = &sq; 
+  cout <<  __LINE__ << "\t: " << ps->Area() << endl;
   A *pa;
   return 0;
 }

@@ -1,8 +1,8 @@
-inheritance$ g++ inheritance180.cpp 
-inheritance180.cpp: In function ‘int main()’:
-inheritance180.cpp:49:6: error: could not convert ‘b’ from ‘A’ to ‘Shape’
-   49 |   f1(b);
-      |      ^
-      |      |
-      |      A
+inheritance180.cpp: In function ‘void f1(A*)’:
+inheritance180.cpp:40:36: error: request for member ‘Area’ in ‘a’, which is of pointer type ‘A*’ (maybe you meant to use ‘->’ ?)
+   40 |   cout <<  __LINE__ << "\t: " << a.Area() << endl;
+      |                                    ^~~~
+inheritance180.cpp:41:5: error: request for member ‘show’ in ‘a’, which is of pointer type ‘A*’ (maybe you meant to use ‘->’ ?)
+   41 |   a.show();
+      |     ^~~~
 inheritance$ 
