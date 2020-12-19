@@ -1,0 +1,8 @@
+inheritance$ g++ inheritance160.cpp 
+inheritance$ ./a.out
+18	: 0
+23	: 0
+25	: 9
+27	: 0
+29	: 0
+inheritance$ 

@@ -14,15 +14,19 @@ public:
   int Area(void){return d*d;}
   Square(int d=1){this->d=d;}
 };
-void f1(Shape a){cout<<a.Area()<<endl;}
+void f1(Shape a){
+  cout << __LINE__ << "\t: " << a.Area() << endl;
+}
 int main(){
   Shape s;
   f1(s);
-  //cout<<s.Area()<<endl;
+  cout <<  __LINE__ << "\t: " << s.Area() << endl;
   Square sq(3);
-  cout<<sq.Area()<<endl;
-  Shape *ps=&s; cout<<ps->Area()<<endl;
-  ps=&sq; cout<<ps->Area()<<endl;
+  cout <<  __LINE__ << "\t: " << sq.Area()<< endl;
+  Shape *ps = &s; 
+  cout <<  __LINE__ << "\t: " << ps->Area() << endl;
+  ps = &sq; 
+  cout<<  __LINE__ << "\t: " << ps->Area() << endl;
   A *pa;
   return 0;
 }
