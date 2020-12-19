@@ -1,8 +1,15 @@
-inheritance180.cpp: In function ‘void f1(A*)’:
-inheritance180.cpp:40:36: error: request for member ‘Area’ in ‘a’, which is of pointer type ‘A*’ (maybe you meant to use ‘->’ ?)
-   40 |   cout <<  __LINE__ << "\t: " << a.Area() << endl;
-      |                                    ^~~~
-inheritance180.cpp:41:5: error: request for member ‘show’ in ‘a’, which is of pointer type ‘A*’ (maybe you meant to use ‘->’ ?)
-   41 |   a.show();
-      |     ^~~~
+inheritance$ g++ inheritance180.cpp 
+inheritance$ ./a.out
+40	: 6	: in A
+0
+11	: show in A
+40	: 6	: in A
+0
+11	: show in A
+49	: 33	: in Square
+9
+51	: 21	: in Shape
+0
+53	: 21	: in Shape
+0
 inheritance$ 
