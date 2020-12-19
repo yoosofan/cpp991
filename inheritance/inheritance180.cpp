@@ -44,8 +44,8 @@ void f1(A a){
 int main(){
   Shape s;  
   f1(s);
-  // Square sq(3);  
-  // f1(sq);
+  Square sq(3);  
+  f1(sq);
   cout << __LINE__ << "\t: " << sq.Area() << endl;
   Shape *ps = &s; 
   cout << __LINE__ << "\t: " << ps->Area() << endl;
