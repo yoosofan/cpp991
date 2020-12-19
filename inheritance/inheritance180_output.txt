@@ -1,15 +1,8 @@
 inheritance$ g++ inheritance180.cpp 
-inheritance$ ./a.out
-40	: 6	: in A
-0
-11	: show in A
-40	: 6	: in A
-0
-11	: show in A
-49	: 33	: in Square
-9
-51	: 21	: in Shape
-0
-53	: 21	: in Shape
-0
+inheritance180.cpp: In function ‘int main()’:
+inheritance180.cpp:49:6: error: could not convert ‘b’ from ‘A’ to ‘Shape’
+   49 |   f1(b);
+      |      ^
+      |      |
+      |      A
 inheritance$ 
