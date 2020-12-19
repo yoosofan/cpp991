@@ -1,0 +1,8 @@
+inheritance$ g++ inheritance250.cpp 
+inheritance$ ./a.out
+Area in Square 
+9
+Area in Shape
+0
+name: square	color: blue	d: 3
+inheritance$ 
