@@ -6,6 +6,10 @@ class A{
     cout << __LINE__ << "\t: " << "in A" << endl;
     return 0;
   }
+
+  void show(void){
+    cout << __LINE__ << "\t: " << "show in A" << endl;
+  } 
 };
 
 class Shape: public A{
