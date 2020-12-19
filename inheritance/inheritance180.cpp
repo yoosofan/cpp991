@@ -16,7 +16,7 @@ class Shape: public A{
   }
 };
 
-class Square: private Shape{
+class Square: public Shape{
   int d;
 public:
   int Area(void){
@@ -26,7 +26,7 @@ public:
   Square(int d=1){this->d=d;}
 };
 
-void f1(Shape a){
+void f1(A a){
   cout <<  __LINE__ << "\t: " << a.Area() << endl;
   a.show();
 }
@@ -34,8 +34,8 @@ void f1(Shape a){
 int main(){
   Shape s;  
   f1(s);
-  Square sq(3);  
-  f1(sq);
+  // Square sq(3);  
+  // f1(sq);
   cout << __LINE__ << "\t: " << sq.Area() << endl;
   Shape *ps = &s; 
   cout << __LINE__ << "\t: " << ps->Area() << endl;
