@@ -1,11 +1,9 @@
 inheritance$ g++ inheritance190.cpp 
-inheritance$ ./a.out
-32	: 13	: in Shape
-0
-17	: show in shape
-32	: 13	: in Shape
-0
-17	: show in shape
-42	: 13	: in Shape
-0
+inheritance190.cpp: In function ‘int main()’:
+inheritance190.cpp:39:8: error: ‘Shape’ is an inaccessible base of ‘Square’
+   39 |   f1(sq);
+      |        ^
+inheritance190.cpp:31:15: note:   initializing argument 1 of ‘void f1(Shape)’
+   31 | void f1(Shape a){
+      |         ~~~~~~^
 inheritance$ 

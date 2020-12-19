@@ -18,7 +18,7 @@ public:
   }
 };
 
-class Square: public Shape{
+class Square: protected Shape{
   int d;
 public:
   int Area(void){
