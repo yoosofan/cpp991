@@ -1,0 +1,9 @@
+inheritance$ g++ inheritance200.cpp 
+inheritance200.cpp: In function ‘int main()’:
+inheritance200.cpp:28:21: error: ‘Shape’ is an inaccessible base of ‘Square’
+   28 |   drive1 d1; d1.f(sq);
+      |                     ^
+inheritance200.cpp:21:18: note:   initializing argument 1 of ‘void drive1::f(Shape)’
+   21 |     void f(Shape a){cout<<a.Area()<<endl;a.show();}
+      |            ~~~~~~^
+inheritance$ 
