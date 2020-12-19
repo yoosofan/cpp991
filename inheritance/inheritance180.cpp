@@ -37,8 +37,8 @@ public:
 };
 
 void f1(A *a){
-  cout <<  __LINE__ << "\t: " << a.Area() << endl;
-  a.show();
+  cout <<  __LINE__ << "\t: " << a -> Area() << endl;
+  a -> show();
 }
 
 int main(){
