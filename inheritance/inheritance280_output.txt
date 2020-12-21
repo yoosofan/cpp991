@@ -1,12 +1,5 @@
-2
-9
-7   0
-2
-4
-	b1:   4
-2
-Hello world7
-global_variable4i : 15
-External global_variable4i : 12
-2
-3
+inheritance$ g++ inheritance280.cpp 
+inheritance280.cpp:27:16: error: ISO C++ forbids in-class initialization of non-const static member ‘D::si’
+   27 |     static int si = 7;
+      |                ^~
+inheritance$ 
