@@ -1,7 +1,2 @@
-inheritance$ g++ inheritance260.cpp 
-inheritance$ ./a.out
 9
 9
-name: square	color: blue	d: 3
-inheritance$ 
-

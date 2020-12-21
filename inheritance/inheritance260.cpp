@@ -28,6 +28,6 @@ int main(){
   //Shape *ps = &s;   cout << ps->Area() << endl;
   Shape * ps = & sq; 
   cout << ps -> Area() << endl;
-  sq.printAll();
+  // sq.printAll();
   return 0;
 }
