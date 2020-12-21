@@ -2,6 +2,7 @@
 using namespace std;
 
 class A{
+  protected:
     int a1;
     friend void print(A);
     //A(){}
@@ -12,6 +13,7 @@ class A{
     { cout << a1 << endl; }
 };
 class B{
+  protected:
     int b1;
     friend void print(A);
     public:
