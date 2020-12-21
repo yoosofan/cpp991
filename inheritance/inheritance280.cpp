@@ -9,7 +9,7 @@ class A{
     A(int a):a1(a){}
 
     virtual void Show(void)
-    { cout<<a1<<endl; }
+    { cout << a1 << endl; }
 };
 class B{
     int b1;
@@ -42,24 +42,24 @@ void print(A a1){
     cout<<b4.b1<<endl;
 }
 /*void myPrint(A a1){a1.Show();}void myPrint(B a1){a1.Show();}*/
-template<class T> void myPrint(T a1){a1.Show();}
+/*template<class T> void myPrint(T a1){a1.Show();}
 class C {
     int i;
     public:
     C(){ i = 0; }
     void Show(void){ int i = 7; cout << i <<"   " << this->i << endl; }
 };
-
+*/
 static int i=12;
 //static int global_variable_i=12;
 int D::si = 7;
 int main(){
     A a1(2);
-    myPrint(a1);
+    a1.Show();    // myPrint(a1);
     B b1(9);
-    myPrint(b1);
+    b1.Show();
     C c1;
-    myPrint(b1);
+    c1.Show();
     //a1.Show();
     D d1(2,3,4);
     d1.Show();
