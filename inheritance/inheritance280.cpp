@@ -24,7 +24,7 @@ class B{
 class D: public A, public B{
     //int d1;    //int b1;
     // int b1;
-    static int si = 7;
+    static const int si = 7;
    public:
     static void printHello(void)
     {cout << "Hello world" << si << endl;}
