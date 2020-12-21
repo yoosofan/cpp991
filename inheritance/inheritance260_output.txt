@@ -1,5 +1,14 @@
 inheritance$ g++ inheritance260.cpp 
 inheritance260.cpp: In function ‘int main()’:
+inheritance260.cpp:25:9: error: cannot declare variable ‘s’ to be of abstract type ‘Shape’
+   25 |   Shape s;  cout<<s.Area()<<endl;
+      |         ^
+inheritance260.cpp:3:7: note:   because the following virtual functions are pure within ‘Shape’:
+    3 | class Shape{
+      |       ^~~~~
+inheritance260.cpp:9:15: note: 	‘virtual int Shape::Area()’
+    9 |   virtual int Area(void) = 0;
+      |               ^~~~
 inheritance260.cpp:26:10: error: cannot declare variable ‘sq’ to be of abstract type ‘Square’
    26 |   Square sq(3);
       |          ^~
