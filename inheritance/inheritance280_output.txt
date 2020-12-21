@@ -1,12 +1,22 @@
-2
-9
-7   0
-2
-3
-	b1:   4
-2
-Hello world7
-global_variable4i : 15
-External global_variable4i : 12
-2
-3
+inheritance$ g++ inheritance280.cpp 
+inheritance280.cpp: In constructor ‘D::D(int, int, int)’:
+inheritance280.cpp:30:9: error: ‘int B::b1’ is private within this context
+   30 |         b1 = d;
+      |         ^~
+inheritance280.cpp:15:9: note: declared private here
+   15 |     int b1;
+      |         ^~
+inheritance280.cpp:31:15: error: ‘int B::b1’ is private within this context
+   31 |         this->b1 = d;
+      |               ^~
+inheritance280.cpp:15:9: note: declared private here
+   15 |     int b1;
+      |         ^~
+inheritance280.cpp: In member function ‘virtual void D::Show()’:
+inheritance280.cpp:36:31: error: ‘int B::b1’ is private within this context
+   36 |         cout << "\tb1:   " << b1 << endl;
+      |                               ^~
+inheritance280.cpp:15:9: note: declared private here
+   15 |     int b1;
+      |         ^~
+inheritance$ 

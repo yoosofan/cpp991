@@ -21,7 +21,7 @@ class B{
 };
 class D: public A, public B{
     //int d1;    //int b1;
-    int b1;
+    // int b1;
     static int si;
    public:
     static void printHello(void)
