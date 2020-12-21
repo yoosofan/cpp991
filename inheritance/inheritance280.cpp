@@ -26,20 +26,20 @@ class D: public A, public B{
    public:
     static void printHello(void)
     {cout << "Hello world" << si << endl;}
-    D(int a, int b, int d):A(a),B(b){
+    D(int a, int b, int d):A(a), B(b){
         b1 = d;
-        this->b1=d;
+        this->b1 = d;
     }
     virtual void Show(void){
         A::Show();
         B::Show();
-        cout<<"\tb1:   "<<b1<<endl;
+        cout << "\tb1:   " << b1 << endl;
     }
 };
 void print(A a1){
-    cout<< a1.a1 <<endl;
+    cout<< a1.a1 << endl;
     B b4(3);
-    cout<<b4.b1<<endl;
+    cout << b4.b1 << endl;
 }
 /*void myPrint(A a1){a1.Show();}void myPrint(B a1){a1.Show();}*/
 /*template<class T> void myPrint(T a1){a1.Show();}
@@ -50,7 +50,7 @@ class C {
     void Show(void){ int i = 7; cout << i <<"   " << this->i << endl; }
 };
 */
-static int i=12;
+static int global_variable4i = 12;
 //static int global_variable_i=12;
 int D::si = 7;
 int main(){
@@ -66,7 +66,7 @@ int main(){
     a1.Show();
     //A::Show();
     D::printHello();
-    int i=15;
+    int global_variable4i = 15;
     cout << "i:   " << i << endl;
     cout << "External i  " << ::i <<endl;
     //cout<<D::si<<endl;
