@@ -12,7 +12,7 @@ public:
 class Square: public Shape{
   int d;
 public:
-  // virtual int Area(void){return d*d;}
+  virtual int Area(void){return d*d;}
   Square(int d=1, string name="square",
     string color="blue"):Shape(name, color){this->d=d;}
   void printAll(void){
@@ -22,8 +22,8 @@ public:
   // virtual static void f(void){cout<<"Square virtual static f"<<endl;}
 };
 int main(){
-  Shape s;
-  cout << s.Area() << endl;
+  // Shape s;
+  // cout << s.Area() << endl;
   Square sq(3);
   // cout << sq.Area() << endl;
   //Shape *ps = &s;   cout << ps->Area() << endl;
