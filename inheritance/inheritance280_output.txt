@@ -1,5 +1,6 @@
 inheritance$ g++ inheritance280.cpp 
-/usr/bin/ld: /tmp/cct3PBC7.o: in function `D::printHello()':
-inheritance280.cpp:(.text._ZN1D10printHelloEv[_ZN1D10printHelloEv]+0x20): undefined reference to `D::si'
-collect2: error: ld returned 1 exit status
+inheritance280.cpp: In function ‘int main()’:
+inheritance280.cpp:59:15: error: qualified-id in declaration before ‘=’ token
+   59 |     int D::si = 7;
+      |               ^
 inheritance$ 
