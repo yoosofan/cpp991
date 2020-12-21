@@ -41,15 +41,16 @@ void print(A a1){
     B b4(3);
     cout << b4.b1 << endl;
 }
-/*void myPrint(A a1){a1.Show();}void myPrint(B a1){a1.Show();}*/
-/*template<class T> void myPrint(T a1){a1.Show();}
+void myPrint(A a1){a1.Show();}
+void myPrint(B a1){a1.Show();}
+/*template<class T> void myPrint(T a1){a1.Show();}*/
 class C {
     int i;
     public:
     C(){ i = 0; }
     void Show(void){ int i = 7; cout << i <<"   " << this->i << endl; }
 };
-*/
+
 static int global_variable4i = 12;
 //static int global_variable_i=12;
 int D::si = 7;
