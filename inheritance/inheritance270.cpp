@@ -12,7 +12,10 @@ class Square: public Shape{
 public:
   int Area(void){return d*d;}
   Square(int d=1){this->d=d;}
-  void printAll(void){ cout<<"name: "<<this->name<<'\t'<<"color: "<<this->color<<'\t'<<"d: "<<this->d<<endl;}
+  void printAll(void){ 
+    cout << "name: " << this->name << '\t' << "color: "
+         << this->color << '\t' << "d: " << this->d << endl;
+  }
 };
 int main(){
   Shape s;
