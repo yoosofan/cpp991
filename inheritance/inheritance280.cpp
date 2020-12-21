@@ -67,8 +67,8 @@ int main(){
     //A::Show();
     D::printHello();
     int global_variable4i = 15;
-    cout << "i:   " << global_variable4i << endl;
-    cout << "External i  " << ::global_variable4i <<endl;
+    cout << "global_variable4i : " << global_variable4i << endl;
+    cout << "External global_variable4i : " << ::global_variable4i <<endl;
     //cout<<D::si<<endl;
     print(a1);
     return 0;
