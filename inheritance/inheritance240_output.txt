@@ -8,3 +8,4 @@ in Square Area of Square: 9
 9
 name: square	color: blue	d: 3
 inheritance$ 
+
