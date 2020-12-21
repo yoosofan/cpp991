@@ -1,6 +1,12 @@
-inheritance$ g++ inheritance280.cpp 
-inheritance280.cpp: In function ‘int main()’:
-inheritance280.cpp:59:15: error: qualified-id in declaration before ‘=’ token
-   59 |     int D::si = 7;
-      |               ^
-inheritance$ 
+2
+9
+7   0
+2
+4
+	b1:   4
+2
+Hello world7
+global_variable4i : 15
+External global_variable4i : 12
+2
+3
