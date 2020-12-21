@@ -54,7 +54,7 @@ class C {
 };
 static int global_variable4i = 12;
 //static int global_variable_i=12;
-int D::si = 7;
+// int D::si = 7;
 int main(){
     A a1(2);
     a1.Show();    // myPrint(a1);

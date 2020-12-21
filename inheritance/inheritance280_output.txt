@@ -1,12 +1,5 @@
-2
-9
-7   0
-2
-4
-	b1:   4
-2
-Hello world7
-global_variable4i : 15
-External global_variable4i : 12
-2
-3
+inheritance$ g++ inheritance280.cpp 
+/usr/bin/ld: /tmp/cct3PBC7.o: in function `D::printHello()':
+inheritance280.cpp:(.text._ZN1D10printHelloEv[_ZN1D10printHelloEv]+0x20): undefined reference to `D::si'
+collect2: error: ld returned 1 exit status
+inheritance$ 
