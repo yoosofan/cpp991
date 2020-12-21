@@ -50,7 +50,6 @@ class C {
     C(){ i = 0; }
     void Show(void){ int i = 7; cout << i <<"   " << this->i << endl; }
 };
-
 static int global_variable4i = 12;
 //static int global_variable_i=12;
 int D::si = 7;

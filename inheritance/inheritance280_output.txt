@@ -1,10 +1,12 @@
-inheritance$ g++ inheritance280.cpp 
-inheritance280.cpp: In function ‘int main()’:
-inheritance280.cpp:61:5: error: ‘C’ was not declared in this scope
-   61 |     C c1;
-      |     ^
-inheritance280.cpp:62:5: error: ‘c1’ was not declared in this scope; did you mean ‘b1’?
-   62 |     c1.Show();
-      |     ^~
-      |     b1
-inheritance$ 
+2
+9
+7   0
+2
+3
+	b1:   4
+2
+Hello world7
+global_variable4i : 15
+External global_variable4i : 12
+2
+3
