@@ -1,0 +1,50 @@
+emplate$ g++ 420_search.cpp 
+420_search.cpp: In function ‘int search(T*, T, int)’:
+420_search.cpp:38:72: warning: friend declaration ‘search(T*, T, int)::complexCls operator+(const search(T*, T, int)::complexCls&, const search(T*, T, int)::complexCls&)’ declares a non-template function [-Wnon-template-friend]
+   38 |   friend complexCls operator +(const complexCls& a, const complexCls& b);
+      |                                                                        ^
+420_search.cpp:38:72: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
+420_search.cpp:39:71: warning: friend declaration ‘search(T*, T, int)::complexCls operator-(const search(T*, T, int)::complexCls&, const search(T*, T, int)::complexCls&)’ declares a non-template function [-Wnon-template-friend]
+   39 |   friend complexCls operator -(const complexCls& a,const complexCls& b);
+      |                                                                       ^
+420_search.cpp:40:72: warning: friend declaration ‘search(T*, T, int)::complexCls operator*(const search(T*, T, int)::complexCls&, const search(T*, T, int)::complexCls&)’ declares a non-template function [-Wnon-template-friend]
+   40 |   friend complexCls operator *(const complexCls& a, const complexCls& b);
+      |                                                                        ^
+420_search.cpp:41:67: warning: friend declaration ‘bool operator==(const search(T*, T, int)::complexCls&, const search(T*, T, int)::complexCls&)’ declares a non-template function [-Wnon-template-friend]
+   41 |   friend bool operator ==(const complexCls& a, const complexCls& b);
+      |                                                                   ^
+420_search.cpp:42:64: warning: friend declaration ‘std::ostream& operator<<(std::ostream&, const search(T*, T, int)::complexCls&)’ declares a non-template function [-Wnon-template-friend]
+   42 |   friend ostream& operator << (ostream& o1, const complexCls& a);
+      |                                                                ^
+420_search.cpp:44:59: error: a function-definition is not allowed here before ‘{’ token
+   44 | bool operator ==(const complexCls& a, const complexCls& b){
+      |                                                           ^
+420_search.cpp:47:56: error: a function-definition is not allowed here before ‘{’ token
+   47 | ostream& operator << (ostream& o1, const complexCls& a){
+      |                                                        ^
+420_search.cpp:51:64: error: a function-definition is not allowed here before ‘{’ token
+   51 | complexCls operator +(const complexCls& a, const complexCls& b){
+      |                                                                ^
+420_search.cpp:57:63: error: a function-definition is not allowed here before ‘{’ token
+   57 | complexCls operator -(const complexCls& a,const complexCls& b){
+      |                                                               ^
+420_search.cpp:63:64: error: a function-definition is not allowed here before ‘{’ token
+   63 | complexCls operator *(const complexCls& a, const complexCls& b){
+      |                                                                ^
+420_search.cpp:69:11: error: a function-definition is not allowed here before ‘{’ token
+   69 | int main(){
+      |           ^
+420_search.cpp:80:1: error: a template declaration cannot appear at block scope
+   80 | template<typename T> int search(T *a, T v, int n){
+      | ^~~~~~~~
+420_search.cpp:85:1: error: expected ‘}’ at end of input
+   85 | }
+      | ^
+420_search.cpp:4:50: note: to match this ‘{’
+    4 | template<typename T> int search(T *a, T v, int n){
+      |                                                  ^
+420_search.cpp:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   85 | }
+      | ^
+template$ 
+
