@@ -59,11 +59,11 @@ template<typename T>class myArray{
     }
     return a[index];
   }
-  friend ostream& operator<<(ostream& out1, const myArray& b);
-  friend bool operator==(const myArray& a, const myArray& b);
-  friend istream& operator>>(istream& in1, myArray& b);
+  template<typename K> friend ostream& operator<<(ostream& out1, const myArray<K>& b);
+  template<typename K> friend bool operator==(const myArray<K>& a, const myArray<K>& b);
+  template<typename K> friend istream& operator>>(istream& in1, myArray<K>& b);
 };
-bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
+template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
   if(a.n == b.n)
@@ -74,14 +74,14 @@ bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
     retVal = true;
   return retVal;
 }
-istream& operator>>(istream& in1, myArray& b){
+template<typename Y> istream& operator>>(istream& in1, myArray<Y>& b){
   // delete[] b.a;  b.a = nullptr;
   b.n = 0;
   cout << "Enter n ";
   in1 >> b.n;
-  while( b.n < 0 || b.n > myArray::MAX ){
+  while( b.n < 0 || b.n > myArray<Y>::MAX ){
     cout << "number of element must be greater than 0 and less than  " 
-      << myArray::MAX << endl;
+      << myArray<Y>::MAX << endl;
     in1 >> b.n;
   }
   // b.a = new double[b.n];
@@ -93,44 +93,26 @@ istream& operator>>(istream& in1, myArray& b){
   // else b.a = nullptr;
   return in1;
 }
-ostream& operator<<(ostream& out1, const myArray& b){
+template<typename T> ostream& operator<<(ostream& out1, const myArray<T>& b){
   out1 << "n = " << b.n << endl;
   for(int i = 0; i < b.n ; i++)
     out1 << "a[" << i << "]= " << b.a[i] << endl;
   return out1;
 }
 void f1(void);
-void f2(myArray);
+template<typename T>void f2(myArray<T>);
 int main(){
   f1();
   return 0;
 }
 void f1(void){
   double x[]{10, 12, 34, 54};
-  myArray d(x, sizeof(x) / sizeof(double));
+  myArray<double> d(x, sizeof(x) / sizeof(double));
   cin >> d ;
   cout << d[1] << endl;
   d[1] = 15;
-  d = d + myArray(5) ;
-  // d.operator=(d.operator+(5));
-  d = myArray(5) + d ;
-  // d.print();
-  // cout << "d -- " << endl << d -- << endl;
-  // cout << "-- d " << endl << -- d << endl;
-  // operator<<(operator<<(cout, d), endl);
-
-  // cout << "before call f2" << endl;
-  // f2(d);
+  f2(d);
 }
-void f2(myArray k){
+template<typename T>void f2(myArray<T> k){
   k.print();
-  if( !k )
-    cout << "k is empty (k.n == 0 or all k.a[i] == 0 ) " << endl;
-  else
-    cout << "k is not empty (k.n != 0 and exists i for k.a[i] != 0 ) " << endl;
-  myArray b;
-  if( !b )
-    cout << "b is empty (b.n == 0 or all b.a[i] == 0 ) " << endl;
-  else
-    cout << "b is not empty (b.n != 0 and exists i for b.a[i] != 0 ) " << endl;  
 }
