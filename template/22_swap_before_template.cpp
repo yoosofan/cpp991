@@ -37,6 +37,7 @@ class complexCls{
   friend complexCls operator +(const complexCls& a, const complexCls& b);
   friend complexCls operator -(const complexCls& a,const complexCls& b);
   friend complexCls operator *(const complexCls& a, const complexCls& b);
+  
 }; 
 complexCls operator +(const complexCls& a, const complexCls& b){
   complexCls result ;
@@ -82,8 +83,8 @@ void swap(string& a, string& b){
   a = b;
   b = temp;
 }
-void swap(complexCls& a, ComplexCls& b){
-  double temp = a;
+void swap(complexCls& a, complexCls& b){
+  complexCls temp = a;
   a = b;
   b = temp;
 }
