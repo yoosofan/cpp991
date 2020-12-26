@@ -1,8 +1,37 @@
-820_myArray.cpp: In function ‘void f1()’:
-820_myArray.cpp:123:11: error: missing template arguments before ‘z’
-  123 |   myArray z;
-      |           ^
-820_myArray.cpp:124:10: error: ‘z’ was not declared in this scope
-  124 |   cin >> z ;
-      |          ^
-template$ ^C
+template$ g++ 820_myArray.cpp 
+template$ ./a.out
+n = 4
+a[0]= 10
+a[1]= 12
+a[2]= 34
+a[3]= 54
+
+Enter n 2
+Enter a[0]: 4
+Enter a[1]: 8
+8
+copy construcotr
+ n = 2
+a[0] = 4
+a[1] = 15
+Destructor
+n = 4
+a[0]= Kamran
+a[1]= Reza
+a[2]= Kmabiz
+a[3]= Ali
+
+Enter n 2
+Enter a[0]: ttt
+Enter a[1]: kkk
+kkk
+copy construcotr
+ n = 2
+a[0] = ttt
+a[1] = 
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
+template$ 

@@ -120,7 +120,7 @@ void f1(void){
   myArray<string> r(sx, 4);
   cout << r;
   cout << endl;
-  myArray z;
+  myArray<string> z;
   cin >> z ;
   cout << z[1] << endl;
   z[1] = 15;
