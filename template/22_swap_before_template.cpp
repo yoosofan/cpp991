@@ -3,8 +3,9 @@ using namespace std;
 void swap(double&, double&);
 void swap(string&, string&);
 class complexCls{
-  double re = 0, im = 0;
+  double r = 0, i = 0;
   //explicit complexCls(double m=0 , double n=0) {r=m;i=n;}
+  public:
   complexCls(double m = 0, double n = 0) {
     r = m; 
     i = n;
@@ -14,7 +15,7 @@ class complexCls{
     cout << '(' << r << ',' << i << ')' << '\t' << endl;
   }
   double Magnitude(){
-    return sqrt(r*r+i*i);
+    return sqrt(r * r + i * i );
   }
   //operator bool() const {cout<<"aaa:::: "<<endl;return r==0 && i==0 ? false : true;}
   bool operator!() const {

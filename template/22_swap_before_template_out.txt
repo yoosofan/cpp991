@@ -1,145 +1,7 @@
-emplate$ g++ 22_swap_before_template.cpp 
-22_swap_before_template.cpp: In constructor ‘complexCls::complexCls(double, double)’:
-22_swap_before_template.cpp:9:5: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-    9 |     r = m;
-      |     ^
-      |     re
-22_swap_before_template.cpp:10:5: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   10 |     i = n;
-      |     ^
-      |     im
-22_swap_before_template.cpp: In member function ‘void complexCls::Show()’:
-22_swap_before_template.cpp:14:20: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-   14 |     cout << '(' << r << ',' << i << ')' << '\t' << endl;
-      |                    ^
-      |                    re
-22_swap_before_template.cpp:14:32: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   14 |     cout << '(' << r << ',' << i << ')' << '\t' << endl;
-      |                                ^
-      |                                im
 22_swap_before_template.cpp: In member function ‘double complexCls::Magnitude()’:
-22_swap_before_template.cpp:17:17: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-   17 |     return sqrt(r*r+i*i);
-      |                 ^
-      |                 re
-22_swap_before_template.cpp:17:21: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   17 |     return sqrt(r*r+i*i);
-      |                     ^
-      |                     im
 22_swap_before_template.cpp:17:12: error: ‘sqrt’ was not declared in this scope
-   17 |     return sqrt(r*r+i*i);
+   17 |     return sqrt(r * r + i * i );
       |            ^~~~
-22_swap_before_template.cpp: In member function ‘bool complexCls::operator!() const’:
-22_swap_before_template.cpp:22:14: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-   22 |     return !(r == 0 && i == 0 ? false : true);
-      |              ^
-      |              re
-22_swap_before_template.cpp:22:24: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   22 |     return !(r == 0 && i == 0 ? false : true);
-      |                        ^
-      |                        im
-22_swap_before_template.cpp: In member function ‘complexCls complexCls::operator++()’:
-22_swap_before_template.cpp:26:5: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   26 |     i++;
-      |     ^
-      |     im
-22_swap_before_template.cpp:27:5: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-   27 |     r++;
-      |     ^
-      |     re
-22_swap_before_template.cpp: In member function ‘complexCls complexCls::operator++(int)’:
-22_swap_before_template.cpp:33:5: error: ‘r’ was not declared in this scope; did you mean ‘re’?
-   33 |     r++;
-      |     ^
-      |     re
-22_swap_before_template.cpp:34:5: error: ‘i’ was not declared in this scope; did you mean ‘im’?
-   34 |     i++;
-      |     ^
-      |     im
-22_swap_before_template.cpp: In function ‘std::ostream& operator<<(std::ostream&, const complexCls&)’:
-22_swap_before_template.cpp:43:19: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   43 |    o1 << '(' << a.r << ", " << a.i << ')' ;
-      |                   ^
-      |                   re
-22_swap_before_template.cpp:43:34: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   43 |    o1 << '(' << a.r << ", " << a.i << ')' ;
-      |                                  ^
-      |                                  im
-22_swap_before_template.cpp: In function ‘complexCls operator+(const complexCls&, const complexCls&)’:
-22_swap_before_template.cpp:48:10: error: ‘class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   48 |   result.r = a.r + b.r;
-      |          ^
-      |          re
-22_swap_before_template.cpp:48:16: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   48 |   result.r = a.r + b.r;
-      |                ^
-      |                re
-22_swap_before_template.cpp:48:22: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   48 |   result.r = a.r + b.r;
-      |                      ^
-      |                      re
-22_swap_before_template.cpp:49:10: error: ‘class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   49 |   result.i = a.i + b.i;
-      |          ^
-      |          im
-22_swap_before_template.cpp:49:16: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   49 |   result.i = a.i + b.i;
-      |                ^
-      |                im
-22_swap_before_template.cpp:49:22: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   49 |   result.i = a.i + b.i;
-      |                      ^
-      |                      im
-22_swap_before_template.cpp: In function ‘complexCls operator-(const complexCls&, const complexCls&)’:
-22_swap_before_template.cpp:54:10: error: ‘class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   54 |   result.r = a.r - b.r;
-      |          ^
-      |          re
-22_swap_before_template.cpp:54:16: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   54 |   result.r = a.r - b.r;
-      |                ^
-      |                re
-22_swap_before_template.cpp:54:22: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   54 |   result.r = a.r - b.r;
-      |                      ^
-      |                      re
-22_swap_before_template.cpp:55:10: error: ‘class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   55 |   result.i = a.i - b.i;
-      |          ^
-      |          im
-22_swap_before_template.cpp:55:16: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   55 |   result.i = a.i - b.i;
-      |                ^
-      |                im
-22_swap_before_template.cpp:55:22: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   55 |   result.i = a.i - b.i;
-      |                      ^
-      |                      im
-22_swap_before_template.cpp: In function ‘complexCls operator*(const complexCls&, const complexCls&)’:
-22_swap_before_template.cpp:60:10: error: ‘class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   60 |   result.r = a.r * b.r;
-      |          ^
-      |          re
-22_swap_before_template.cpp:60:16: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   60 |   result.r = a.r * b.r;
-      |                ^
-      |                re
-22_swap_before_template.cpp:60:22: error: ‘const class complexCls’ has no member named ‘r’; did you mean ‘re’?
-   60 |   result.r = a.r * b.r;
-      |                      ^
-      |                      re
-22_swap_before_template.cpp:61:10: error: ‘class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   61 |   result.i = a.i * b.i;
-      |          ^
-      |          im
-22_swap_before_template.cpp:61:16: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   61 |   result.i = a.i * b.i;
-      |                ^
-      |                im
-22_swap_before_template.cpp:61:22: error: ‘const class complexCls’ has no member named ‘i’; did you mean ‘im’?
-   61 |   result.i = a.i * b.i;
-      |                      ^
-      |                      im
 22_swap_before_template.cpp: At global scope:
 22_swap_before_template.cpp:64:26: error: ‘ComplexCls’ has not been declared
    64 | void swap(complexCls& a, ComplexCls& b);
@@ -157,5 +19,13 @@ emplate$ g++ 22_swap_before_template.cpp
 22_swap_before_template.cpp:8:3: note: declared private here
     8 |   complexCls(double m = 0, double n = 0) {
       |   ^~~~~~~~~~
+template$ g++ 22_swap_before_template.cpp 
+22_swap_before_template.cpp: In member function ‘double complexCls::Magnitude()’:
+22_swap_before_template.cpp:18:12: error: ‘sqrt’ was not declared in this scope
+   18 |     return sqrt(r * r + i * i );
+      |            ^~~~
+22_swap_before_template.cpp: At global scope:
+22_swap_before_template.cpp:65:26: error: ‘ComplexCls’ has not been declared
+   65 | void swap(complexCls& a, ComplexCls& b);
+      |                          ^~~~~~~~~~
 template$ 
-
