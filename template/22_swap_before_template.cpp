@@ -1,4 +1,4 @@
-#include<iostrea>
+#include<iostream>
 using namespace std;
 void swap(double&, double&);
 void swap(string&, string&);
