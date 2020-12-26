@@ -1,8 +1,7 @@
 template$ g++ 22_swap_before_template.cpp 
 template$ ./a.out
-a: 2b: 4
-a: 4b: 2
+a: 2	b: 4
+a: 4	b: 2
 sta: Ali	stb: Ahmad
 sta: Ahmad	stb: Ali
 template$ 
-
