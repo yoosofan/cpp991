@@ -1,31 +1,6 @@
-22_swap_before_template.cpp: In member function ‘double complexCls::Magnitude()’:
-22_swap_before_template.cpp:17:12: error: ‘sqrt’ was not declared in this scope
-   17 |     return sqrt(r * r + i * i );
-      |            ^~~~
-22_swap_before_template.cpp: At global scope:
-22_swap_before_template.cpp:64:26: error: ‘ComplexCls’ has not been declared
-   64 | void swap(complexCls& a, ComplexCls& b);
-      |                          ^~~~~~~~~~
-22_swap_before_template.cpp: In function ‘int main()’:
-22_swap_before_template.cpp:74:22: error: ‘complexCls::complexCls(double, double)’ is private within this context
-   74 |   complexCls cma(2, 3), cmb(4, 5);
-      |                      ^
-22_swap_before_template.cpp:8:3: note: declared private here
-    8 |   complexCls(double m = 0, double n = 0) {
-      |   ^~~~~~~~~~
-22_swap_before_template.cpp:74:33: error: ‘complexCls::complexCls(double, double)’ is private within this context
-   74 |   complexCls cma(2, 3), cmb(4, 5);
-      |                                 ^
-22_swap_before_template.cpp:8:3: note: declared private here
-    8 |   complexCls(double m = 0, double n = 0) {
-      |   ^~~~~~~~~~
-template$ g++ 22_swap_before_template.cpp 
-22_swap_before_template.cpp: In member function ‘double complexCls::Magnitude()’:
-22_swap_before_template.cpp:18:12: error: ‘sqrt’ was not declared in this scope
-   18 |     return sqrt(r * r + i * i );
-      |            ^~~~
-22_swap_before_template.cpp: At global scope:
-22_swap_before_template.cpp:65:26: error: ‘ComplexCls’ has not been declared
-   65 | void swap(complexCls& a, ComplexCls& b);
+emplate$ g++ 22_swap_before_template.cpp 
+22_swap_before_template.cpp:66:26: error: ‘ComplexCls’ has not been declared
+   66 | void swap(complexCls& a, ComplexCls& b);
       |                          ^~~~~~~~~~
 template$ 
+
