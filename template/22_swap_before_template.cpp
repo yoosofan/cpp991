@@ -66,6 +66,10 @@ int main(){
   cout << "sta: " << sta << "\tstb: " << stb << endl;
   swap(sta, stb);
   cout << "sta: " << sta << "\tstb: " << stb << endl;
+  complexCls cma(2, 3), cmb(4, 5);
+  cout << "cma: " << cma << "\tcmb: " << cmb << endl;
+  swap(cma, cmb);
+  cout << "cma: " << cma << "\tcmb: " << cmb << endl;
   return 0;
 }
 void swap(double& a, double& b){
