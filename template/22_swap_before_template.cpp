@@ -37,8 +37,12 @@ class complexCls{
   friend complexCls operator +(const complexCls& a, const complexCls& b);
   friend complexCls operator -(const complexCls& a,const complexCls& b);
   friend complexCls operator *(const complexCls& a, const complexCls& b);
-  
-}; 
+  friend ostream& operator << (ostream& o1, const complexCls& a);
+};
+ostream& operator << (ostream& o1, const complexCls& a){
+   o1 << '(' << a.r << ", " << a.i << ')' ;
+   return o1;
+}
 complexCls operator +(const complexCls& a, const complexCls& b){
   complexCls result ;
   result.r = a.r + b.r;
