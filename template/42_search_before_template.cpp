@@ -75,7 +75,7 @@ int main(){
   cout << search(ae, 33, 6) << endl;
   string am[] = {"ali", "reza", "kamran", "hamid"};
   cout << search(am, "reza", 4) << endl;
-  complexCls cmar[] = { {2, 3},  {4, 5}, {6, 7}}
+  complexCls cmar[] = { {2, 3},  {4, 5}, {6, 7}};
   cout << search(complexCls(4, 6), 3) << endl;
   cout << search(complexCls(8, 12), 3) << endl;
   return 0;

@@ -1,8 +1,20 @@
 template$ g++ 42_search_before_template.cpp 
 42_search_before_template.cpp: In function ‘int main()’:
-42_search_before_template.cpp:79:3: error: expected ‘,’ or ‘;’ before ‘cout’
+42_search_before_template.cpp:79:37: error: no matching function for call to ‘search(complexCls, int)’
    79 |   cout << search(complexCls(4, 6), 3) << endl;
-      |   ^~~~
+      |                                     ^
+42_search_before_template.cpp:4:5: note: candidate: ‘int search(double*, double, int)’
+    4 | int search(double *a, double v, int n);
+      |     ^~~~~~
+42_search_before_template.cpp:4:5: note:   candidate expects 3 arguments, 2 provided
+42_search_before_template.cpp:5:5: note: candidate: ‘int search(std::string*, std::string, int)’
+    5 | int search(string *a, string v, int n);
+      |     ^~~~~~
+42_search_before_template.cpp:5:5: note:   candidate expects 3 arguments, 2 provided
+42_search_before_template.cpp:71:5: note: candidate: ‘int search(complexCls*, complexCls, int)’
+   71 | int search(complexCls *a, complexCls v, int n);
+      |     ^~~~~~
+42_search_before_template.cpp:71:5: note:   candidate expects 3 arguments, 2 provided
 42_search_before_template.cpp:80:38: error: no matching function for call to ‘search(complexCls, int)’
    80 |   cout << search(complexCls(8, 12), 3) << endl;
       |                                      ^
@@ -18,4 +30,3 @@ template$ g++ 42_search_before_template.cpp
    71 | int search(complexCls *a, complexCls v, int n);
       |     ^~~~~~
 42_search_before_template.cpp:71:5: note:   candidate expects 3 arguments, 2 provided
-template$ 
