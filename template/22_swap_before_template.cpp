@@ -3,11 +3,14 @@ using namespace std;
 void swap(double&, double&);
 void swap(string&, string&);
 int main(){
-  double ae[20] = {3, 4, 5, 6, 8, 9};
-  cout << search(ae, 3, 6) << endl;
-  cout << search(ae, 33, 6)  << endl;
-  string am[]={"ali", "reza", "kamran", "hamid"};
-  cout << search(am,"reza",4) << endl;
+  double a = 2, b = 4 ;
+  cout << "a: " << a << "b: " << b << endl;
+  swap(a, b);
+  cout << "a: " << a << "b: " << b << endl;
+  string sta = "Ali" , stb = "Ahmad";
+  cout << "sta: " << sta << "\tstb: " << stb << endl;
+  swap(sta, atb);
+  cout << "sta: " << sta << "\tstb: " << stb << endl;
   return 0;
 }
 void swap(double& a, double& b){

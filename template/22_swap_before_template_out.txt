@@ -1,0 +1,14 @@
+template$ g++ 22_swap_before_template.cpp 
+22_swap_before_template.cpp: In function ‘int main()’:
+22_swap_before_template.cpp:12:13: error: ‘atb’ was not declared in this scope; did you mean ‘stb’?
+   12 |   swap(sta, atb);
+      |             ^~~
+      |             stb
+22_swap_before_template.cpp: In function ‘void swap(std::string&, std::string&)’:
+22_swap_before_template.cpp:22:17: error: ‘a’ was not declared in this scope
+   22 |   string temp = a;
+      |                 ^
+22_swap_before_template.cpp:23:7: error: ‘b’ was not declared in this scope
+   23 |   a = b;
+      |       ^
+template$ 
