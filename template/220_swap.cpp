@@ -1,8 +1,7 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-void swap(double&, double&);
-void swap(string&, string&);
+template<typename T> void swap(T&, T&);
 class complexCls{
   double r = 0, i = 0;
   //explicit complexCls(double m=0 , double n=0) {r=m;i=n;}
@@ -63,7 +62,6 @@ complexCls operator *(const complexCls& a, const complexCls& b){
   result.i = a.i * b.i;
   return result;
 }
-void swap(complexCls& a, complexCls& b);
 int main(){
   double a = 2, b = 4 ;
   cout << "a: " << a << "\tb: " << b << endl;
@@ -79,18 +77,8 @@ int main(){
   cout << "cma: " << cma << "\tcmb: " << cmb << endl;
   return 0;
 }
-void swap(double& a, double& b){
-  double temp = a;
-  a = b;
-  b = temp;
-}
-void swap(string& a, string& b){
-  string temp = a;
-  a = b;
-  b = temp;
-}
-void swap(complexCls& a, complexCls& b){
-  complexCls temp = a;
+template<typename T> void swap(T& a, T& b){
+  T temp = a;
   a = b;
   b = temp;
 }
