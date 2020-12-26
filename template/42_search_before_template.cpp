@@ -39,10 +39,10 @@ class complexCls{
   friend complexCls operator +(const complexCls& a, const complexCls& b);
   friend complexCls operator -(const complexCls& a,const complexCls& b);
   friend complexCls operator *(const complexCls& a, const complexCls& b);
-  friend complexCls operator ==(const complexCls& a, const complexCls& b);
+  friend bool operator ==(const complexCls& a, const complexCls& b);
   friend ostream& operator << (ostream& o1, const complexCls& a);
 };
-complexCls operator ==(const complexCls& a, const complexCls& b){
+bool operator ==(const complexCls& a, const complexCls& b){
   return a.r == b.r && a.i == b.i;
 }
 ostream& operator << (ostream& o1, const complexCls& a){
@@ -75,6 +75,9 @@ int main(){
   cout << search(ae, 33, 6) << endl;
   string am[] = {"ali", "reza", "kamran", "hamid"};
   cout << search(am, "reza", 4) << endl;
+  complexCls cmar[] = { {2, 3},  {4, 5}, {6, 7}}
+  cout << search(complexCls(4, 6), 3) << endl;
+  cout << search(complexCls(8, 12), 3) << endl;
   return 0;
 }
 int search(double *a, double v, int n){
