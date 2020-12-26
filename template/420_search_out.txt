@@ -1,13 +1,9 @@
 template$ g++ 420_search.cpp 
-420_search.cpp: In function ‘int main()’:
-420_search.cpp:74:31: error: no matching function for call to ‘search(std::string [4], const char [5], int)’
-   74 |   cout << search(am, "reza", 4) << endl;
-      |                               ^
-420_search.cpp:4:26: note: candidate: ‘template<class T> int search(T*, T, int)’
-    4 | template<typename T> int search(T *a, T v, int n);
-      |                          ^~~~~~
-420_search.cpp:4:26: note:   template argument deduction/substitution failed:
-420_search.cpp:74:31: note:   deduced conflicting types for parameter ‘T’ (‘std::__cxx11::basic_string<char>’ and ‘const char*’)
-   74 |   cout << search(am, "reza", 4) << endl;
-      |                               ^
+template$ ./a.out
+0
+-1
+1
+-1
+-1
+-1
 template$ 
