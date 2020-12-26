@@ -8,14 +8,15 @@ int main(){
   double ae[20];
   int i,j=2;
   for(i=0; i<6; i++) ae[i]=36-i;
-  cout<<search<double>(ae,3,6)<<endl;
-  cout<<search<double>(ae,33,6)<<endl;
-  cout<<"i= "<<i<<"\tj= "<<j<<endl;
-  mySwap<int>(i,j);
-  cout<<"i= "<<i<<"\tj= "<<j<<endl;
-  sort<double>(ae,6);
-  for(i=0;i<6;i++) cout<<ae[i]<<'\t';
-  cout<<endl;
+  for(i=0;i<6;i++) cout << ae[i] << '\t';
+  sort(ae,6);
+  for(i=0;i<6;i++) cout << ae[i] << '\t';
+  cout << endl;
+  string sta[] = {"Kamran", "Koroush", "Ahmad", "Ali", "Leyla"};
+  sort(sta, 5);
+  for(i = 0; i < 5; i++)
+    cout << sta[i] << '\t';
+  cout << endl;
   return 0;
 }
 void sort(double a[],int n){
