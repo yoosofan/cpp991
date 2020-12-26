@@ -1,8 +1,8 @@
-emplate$ g++ 220_swap.cpp 
+template$ g++ 220_swap.cpp 
 220_swap.cpp: In function ‘int main()’:
-220_swap.cpp:68:12: error: call of overloaded ‘swap(double&, double&)’ is ambiguous
-   68 |   swap(a, b);
-      |            ^
+220_swap.cpp:68:20: error: call of overloaded ‘swap<double>(double&, double&)’ is ambiguous
+   68 |   swap<double>(a, b);
+      |                    ^
 220_swap.cpp:4:27: note: candidate: ‘void swap(T&, T&) [with T = double]’
     4 | template<typename T> void swap(T&, T&);
       |                           ^~~~
@@ -15,9 +15,24 @@ In file included from /usr/include/c++/9/bits/nested_exception.h:40,
 /usr/include/c++/9/bits/move.h:182:5: note: candidate: ‘typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = double; typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type = void]’
   182 |     swap(_Tp& __a, _Tp& __b)
       |     ^~~~
-220_swap.cpp:76:16: error: call of overloaded ‘swap(complexCls&, complexCls&)’ is ambiguous
-   76 |   swap(cma, cmb);
-      |                ^
+220_swap.cpp:72:24: error: call of overloaded ‘swap<std::string>(std::string&, std::string&)’ is ambiguous
+   72 |   swap<string>(sta, stb);
+      |                        ^
+220_swap.cpp:4:27: note: candidate: ‘void swap(T&, T&) [with T = std::__cxx11::basic_string<char>]’
+    4 | template<typename T> void swap(T&, T&);
+      |                           ^~~~
+In file included from /usr/include/c++/9/bits/nested_exception.h:40,
+                 from /usr/include/c++/9/exception:144,
+                 from /usr/include/c++/9/ios:39,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
+                 from 220_swap.cpp:1:
+/usr/include/c++/9/bits/move.h:182:5: note: candidate: ‘typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = std::__cxx11::basic_string<char>; typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type = void]’
+  182 |     swap(_Tp& __a, _Tp& __b)
+      |     ^~~~
+220_swap.cpp:76:28: error: call of overloaded ‘swap<complexCls>(complexCls&, complexCls&)’ is ambiguous
+   76 |   swap<complexCls>(cma, cmb);
+      |                            ^
 220_swap.cpp:4:27: note: candidate: ‘void swap(T&, T&) [with T = complexCls]’
     4 | template<typename T> void swap(T&, T&);
       |                           ^~~~
@@ -31,4 +46,3 @@ In file included from /usr/include/c++/9/bits/nested_exception.h:40,
   182 |     swap(_Tp& __a, _Tp& __b)
       |     ^~~~
 template$ 
-

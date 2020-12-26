@@ -65,15 +65,15 @@ complexCls operator *(const complexCls& a, const complexCls& b){
 int main(){
   double a = 2, b = 4 ;
   cout << "a: " << a << "\tb: " << b << endl;
-  swap(a, b);
+  swap<double>(a, b);
   cout << "a: " << a << "\tb: " << b << endl;
   string sta = "Ali" , stb = "Ahmad";
   cout << "sta: " << sta << "\tstb: " << stb << endl;
-  swap(sta, stb);
+  swap<string>(sta, stb);
   cout << "sta: " << sta << "\tstb: " << stb << endl;
   complexCls cma(2, 3), cmb(4, 5);
   cout << "cma: " << cma << "\tcmb: " << cmb << endl;
-  swap(cma, cmb);
+  swap<complexCls>(cma, cmb);
   cout << "cma: " << cma << "\tcmb: " << cmb << endl;
   return 0;
 }
