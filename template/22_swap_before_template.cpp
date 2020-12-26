@@ -9,7 +9,7 @@ int main(){
   cout << "a: " << a << "b: " << b << endl;
   string sta = "Ali" , stb = "Ahmad";
   cout << "sta: " << sta << "\tstb: " << stb << endl;
-  swap(sta, atb);
+  swap(sta, stb);
   cout << "sta: " << sta << "\tstb: " << stb << endl;
   return 0;
 }
