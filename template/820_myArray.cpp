@@ -117,7 +117,7 @@ void f1(void){
   f2(b);
   string sx[]{"Kamran", "Reza", "Kmabiz", "Ali"};
 
-  myArray<string> r(x, 4);
+  myArray<string> r(sx, 4);
   cout << r;
   cout << endl;
   myArray z;

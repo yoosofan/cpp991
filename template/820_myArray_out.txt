@@ -1,25 +1,8 @@
-template$ g++ 820_myArray.cpp 
 820_myArray.cpp: In function ‘void f1()’:
-820_myArray.cpp:120:25: error: no matching function for call to ‘myArray<std::__cxx11::basic_string<char> >::myArray(double [4], int)’
-  120 |   myArray<string> r(x, 4);
-      |                         ^
-820_myArray.cpp:37:3: note: candidate: ‘myArray<T>::myArray(const myArray<T>&) [with T = std::__cxx11::basic_string<char>]’
-   37 |   myArray(const myArray& b){
-      |   ^~~~~~~
-820_myArray.cpp:37:3: note:   candidate expects 1 argument, 2 provided
-820_myArray.cpp:32:12: note: candidate: ‘myArray<T>::myArray(T) [with T = std::__cxx11::basic_string<char>]’
-   32 |   explicit myArray(T x){
-      |            ^~~~~~~
-820_myArray.cpp:32:12: note:   candidate expects 1 argument, 2 provided
-820_myArray.cpp:26:3: note: candidate: ‘myArray<T>::myArray(const T*, int) [with T = std::__cxx11::basic_string<char>]’
-   26 |   myArray(const T *a = nullptr, int n = 0){
-      |   ^~~~~~~
-820_myArray.cpp:26:20: note:   no known conversion for argument 1 from ‘double [4]’ to ‘const std::__cxx11::basic_string<char>*’
-   26 |   myArray(const T *a = nullptr, int n = 0){
-      |           ~~~~~~~~~^~~~~~~~~~~
 820_myArray.cpp:123:11: error: missing template arguments before ‘z’
   123 |   myArray z;
       |           ^
 820_myArray.cpp:124:10: error: ‘z’ was not declared in this scope
   124 |   cin >> z ;
-      |     
+      |          ^
+template$ ^C
