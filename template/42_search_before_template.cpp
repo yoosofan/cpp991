@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int search(double *a, double v, int n);
 int search(string *a, string v, int n);
