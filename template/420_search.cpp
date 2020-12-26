@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-template<typename T> int search(T *a, T v, int n){
+template<typename T> int search(T *a, T v, int n);
 class complexCls{
   double r = 0, i = 0;
   //explicit complexCls(double m=0 , double n=0) {r=m;i=n;}
@@ -68,13 +68,13 @@ complexCls operator *(const complexCls& a, const complexCls& b){
 }
 int main(){
   double ae[20]={3, 4, 5, 6, 8, 9};
-  cout << search(ae, 3, 6) << endl;
-  cout << search(ae, 33, 6) << endl;
+  cout << search<double>(ae, 3, 6) << endl;
+  cout << search<double>(ae, 33, 6) << endl;
   string am[] = {"ali", "reza", "kamran", "hamid"};
   cout << search(am, "reza", 4) << endl;
   complexCls cmar[] = { {2, 3},  {4, 5}, {6, 7}};
-  cout << search(cmar, complexCls(4, 6), 3) << endl;
-  cout << search(cmar, complexCls(8, 12), 3) << endl;
+  cout << search<complexCls>(cmar, complexCls(4, 6), 3) << endl;
+  cout << search<complexCls>(cmar, complexCls(8, 12), 3) << endl;
   return 0;
 }
 template<typename T> int search(T *a, T v, int n){
