@@ -18,7 +18,7 @@ void swap(double& a, double& b){
   a = b;
   b = temp;
 }
-void swap(string&, string&){
+void swap(string& a, string& b){
   string temp = a;
   a = b;
   b = temp;
