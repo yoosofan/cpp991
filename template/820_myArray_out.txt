@@ -1,33 +1,177 @@
 template$ g++ 820_myArray.cpp 
-template$ ./a.out
-Enter n 3
-Enter a[0]: 1
-Enter a[1]: 3
-Enter a[2]: 54
-3
-construcotr myArray: 5
-Assignment myArray
-operator + in myArray
-In + 
-n = 3
-a[0]= 6
-a[1]= 15
-a[2]= 54
-
-Assignment myArray
-Destructor
-Destructor
-construcotr myArray: 5
-Assignment myArray
-operator + in myArray
-In + 
-n = 3
-a[0]= 11
-a[1]= 15
-a[2]= 54
-
-Assignment myArray
-Destructor
-Destructor
-Destructor
+820_myArray.cpp:62:61: warning: friend declaration ‘std::ostream& operator<<(std::ostream&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
+   62 |   friend ostream& operator<<(ostream& out1, const myArray& b);
+      |                                                             ^
+820_myArray.cpp:62:61: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
+820_myArray.cpp:63:60: warning: friend declaration ‘bool operator==(const myArray<T>&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
+   63 |   friend bool operator==(const myArray& a, const myArray& b);
+      |                                                            ^
+820_myArray.cpp:64:54: warning: friend declaration ‘std::istream& operator>>(std::istream&, myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
+   64 |   friend istream& operator>>(istream& in1, myArray& b);
+      |                                                      ^
+820_myArray.cpp:66:23: error: invalid use of template-name ‘myArray’ without an argument list
+   66 | bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
+      |                       ^~~~~~~
+820_myArray.cpp:66:23: note: class template argument deduction is only available with ‘-std=c++17’ or ‘-std=gnu++17’
+820_myArray.cpp:4:27: note: ‘template<class T> class myArray’ declared here
+    4 | template<typename T>class myArray{
+      |                           ^~~~~~~
+820_myArray.cpp:66:41: error: invalid use of template-name ‘myArray’ without an argument list
+   66 | bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
+      |                                         ^~~~~~~
+820_myArray.cpp:66:41: note: class template argument deduction is only available with ‘-std=c++17’ or ‘-std=gnu++17’
+820_myArray.cpp:4:27: note: ‘template<class T> class myArray’ declared here
+    4 | template<typename T>class myArray{
+      |                           ^~~~~~~
+820_myArray.cpp:66:6: error: ‘bool operator==(const int&, const int&)’ must have an argument of class or enumerated type
+   66 | bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
+      |      ^~~~~~~~
+820_myArray.cpp:77:35: error: ‘myArray’ is not a type
+   77 | istream& operator>>(istream& in1, myArray& b){
+      |                                   ^~~~~~~
+820_myArray.cpp: In function ‘std::istream& operator>>(std::istream&, int&)’:
+820_myArray.cpp:79:5: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   79 |   b.n = 0;
+      |     ^
+820_myArray.cpp:81:12: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   81 |   in1 >> b.n;
+      |            ^
+820_myArray.cpp:82:12: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   82 |   while( b.n < 0 || b.n > myArray::MAX ){
+      |            ^
+820_myArray.cpp:82:23: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   82 |   while( b.n < 0 || b.n > myArray::MAX ){
+      |                       ^
+820_myArray.cpp:82:27: error: ‘template<class T> class myArray’ used without template arguments
+   82 |   while( b.n < 0 || b.n > myArray::MAX ){
+      |                           ^~~~~~~
+820_myArray.cpp:84:10: error: ‘template<class T> class myArray’ used without template arguments
+   84 |       << myArray::MAX << endl;
+      |          ^~~~~~~
+820_myArray.cpp:85:14: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   85 |     in1 >> b.n;
+      |              ^
+820_myArray.cpp:88:9: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   88 |   if( b.n )
+      |         ^
+820_myArray.cpp:89:26: error: request for member ‘n’ in ‘b’, which is of non-class type ‘int’
+   89 |     for(int i = 0; i < b.n; i++){
+      |                          ^
+820_myArray.cpp:91:16: error: request for member ‘a’ in ‘b’, which is of non-class type ‘int’
+   91 |       in1 >> b.a[i];
+      |                ^
+820_myArray.cpp: At global scope:
+820_myArray.cpp:96:42: error: invalid use of template-name ‘myArray’ without an argument list
+   96 | ostream& operator<<(ostream& out1, const myArray& b){
+      |                                          ^~~~~~~
+820_myArray.cpp:96:42: note: class template argument deduction is only available with ‘-std=c++17’ or ‘-std=gnu++17’
+820_myArray.cpp:4:27: note: ‘template<class T> class myArray’ declared here
+    4 | template<typename T>class myArray{
+      |                           ^~~~~~~
+820_myArray.cpp: In function ‘std::ostream& operator<<(std::ostream&, const int&)’:
+820_myArray.cpp:97:23: error: request for member ‘n’ in ‘b’, which is of non-class type ‘const int’
+   97 |   out1 << "n = " << b.n << endl;
+      |                       ^
+820_myArray.cpp:98:24: error: request for member ‘n’ in ‘b’, which is of non-class type ‘const int’
+   98 |   for(int i = 0; i < b.n ; i++)
+      |                        ^
+820_myArray.cpp:99:18: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   99 |     out1 << "a[" << i << "]= " << b.a[i] << endl;
+      |     ~~~~~~~~~~~~ ^~ ~
+      |          |          |
+      |          |          int
+      |          std::basic_ostream<char>
+In file included from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+820_myArray.cpp:96:10: note: candidate: ‘std::ostream& operator<<(std::ostream&, const int&)’
+   96 | ostream& operator<<(ostream& out1, const myArray& b){
+      |          ^~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from 820_myArray.cpp:1:
+/usr/include/c++/9/ostream:511:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char; _Traits = std::char_traits<char>]’
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:517:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]’
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:523:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]’
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:528:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]’
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+820_myArray.cpp:99:37: error: request for member ‘a’ in ‘b’, which is of non-class type ‘const int’
+   99 |     out1 << "a[" << i << "]= " << b.a[i] << endl;
+      |                                     ^
+820_myArray.cpp: At global scope:
+820_myArray.cpp:103:16: error: variable or field ‘f2’ declared void
+  103 | void f2(myArray);
+      |                ^
+820_myArray.cpp:103:16: error: missing template arguments before ‘)’ token
+820_myArray.cpp: In function ‘void f1()’:
+820_myArray.cpp:110:11: error: missing template arguments before ‘d’
+  110 |   myArray d(x, sizeof(x) / sizeof(double));
+      |           ^
+820_myArray.cpp:111:10: error: ‘d’ was not declared in this scope
+  111 |   cin >> d ;
+      |          ^
+820_myArray.cpp:114:18: error: missing template arguments before ‘(’ token
+  114 |   d = d + myArray(5) ;
+      |                  ^
+820_myArray.cpp:116:14: error: missing template arguments before ‘(’ token
+  116 |   d = myArray(5) + d ;
+      |              ^
+820_myArray.cpp: At global scope:
+820_myArray.cpp:125:9: error: variable or field ‘f2’ declared void
+  125 | void f2(myArray k){
+      |         ^~~~~~~
+820_myArray.cpp:125:17: error: missing template arguments before ‘k’
+  125 | void f2(myArray k){
+      |                 ^
 template$ 

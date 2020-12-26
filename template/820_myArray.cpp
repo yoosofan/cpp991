@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-class myArray{
+template<typename T>class myArray{
   static const int MAX = 100;
-  double a[MAX];
+  T a[MAX];
   int n;
   void copy(const  myArray& b){
     this -> n = b.n;
@@ -12,22 +12,24 @@ class myArray{
   }
   public:
   // myArray() = delete ;
-  double get(const int index = 0 ) const{
-    if(index < n) return a[index];
-    cout << "Error in getting an element of myArray" << endl;
-    return 0;
+  T get(const int index = 0 ) const{
+    if(index >= n) {
+      cout << "Error in getting an element of myArray" << endl;
+      exit(0);
+    }
+    return a[index];
   }
-  void set(const int index, const double value){
+  void set(const int index, const T value){
     if( index < n ) a[index] = value;
     cout << "Error accessing myArray " << endl;
   }
-  myArray(const double *a=nullptr, int n=0){
+  myArray(const T *a = nullptr, int n = 0){
     if( n > MAX )
       n = MAX ;
     for(this -> n = n--; n >= 0; n--)
       this -> a[n] = a[n];
   }
-  explicit myArray(double x){
+  explicit myArray(T x){
     n = 1;
     a[0] = x;
     cout << "construcotr myArray: " << a[0] << endl;
@@ -49,49 +51,7 @@ class myArray{
     copy(b);
     return *this;
   }
-  myArray operator-(void) const{
-    myArray c(*this);
-    for(int i=0; i<n; i++)
-      c.a[i] = - c.a[i];
-    return c;
-  }
-  bool operator!(void) const{
-    bool retVal = true;
-    if( ! n ) // n == 0
-      retVal = true;
-    else{
-      int i = 0;
-      for(; i < n; i++)
-        if( a[i] != 0 )
-          break;
-      if( i < n )
-        retVal = false;
-    }
-    return retVal;
-  }
-  myArray operator++(){
-    for(int i = 0; i < n; i++)
-      a[i]++;
-    return *this;
-  }
-  myArray operator--(int){
-    myArray c(*this);
-    for(int i = 0; i < n; i++)
-      a[i] --;
-    return c;
-  }
-  myArray operator--(){
-    for(int i = 0; i < n; i++)
-      a[i]--;
-    return *this;
-  }
-  myArray operator++(int){
-    myArray c(*this);
-    for(int i = 0; i < n; i++)
-      a[i] ++;
-    return c;
-  }
-  double& operator[](int index){
+  T& operator[](int index){
     if(index >= n){
       cout << "index out of range: " << index << endl;
       index = 0;
@@ -99,21 +59,10 @@ class myArray{
     }
     return a[index];
   }
-  friend myArray operator+(const myArray& a, const myArray& b);
   friend ostream& operator<<(ostream& out1, const myArray& b);
   friend bool operator==(const myArray& a, const myArray& b);
-  friend myArray operator-(const myArray& a, const myArray& b);
   friend istream& operator>>(istream& in1, myArray& b);
 };
-myArray operator-(const myArray& a, const myArray& b){
-  myArray c;
-  c.n = b.n;
-  for(int i = 0; i < a.n; i++ )
-    c.a[i] = a.a[i] - b.a[i];
-  cout << "operator - in myArray" << endl;
-  return c;
-}
-
 bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
@@ -125,7 +74,6 @@ bool operator==(const myArray& a, const myArray& b){ // < > <= >= !=
     retVal = true;
   return retVal;
 }
-
 istream& operator>>(istream& in1, myArray& b){
   // delete[] b.a;  b.a = nullptr;
   b.n = 0;
@@ -145,31 +93,18 @@ istream& operator>>(istream& in1, myArray& b){
   // else b.a = nullptr;
   return in1;
 }
-
 ostream& operator<<(ostream& out1, const myArray& b){
   out1 << "n = " << b.n << endl;
   for(int i = 0; i < b.n ; i++)
     out1 << "a[" << i << "]= " << b.a[i] << endl;
   return out1;
 }
-myArray operator+(const myArray& a, const myArray& b);
 void f1(void);
 void f2(myArray);
 int main(){
   f1();
   return 0;
 }
-myArray operator+(const myArray& a, const myArray& b){
-    myArray c;
-    c = a.n > b.n ? a : b;
-    int min = a.n < b.n ? a.n : b.n;
-    for(int i = 0; i < min; i++ )
-      c.a[i] = a.a[i] + b.a[i];
-    cout<< "operator + in myArray" << endl;
-    cout << "In + " << endl << c << endl;
-    return c;
-  }
-
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray d(x, sizeof(x) / sizeof(double));
