@@ -18,7 +18,7 @@ int main(){
   return 0;
 }
 template<typename T>void sort(T a[],int n){
-  double temp;
+  T temp;
   int i,j; 
   for(i=0;i<n;i++)
     for(j=i+1;j<n;j++)

@@ -1,10 +1,5 @@
-emplate$ g++ 620_sort.cpp 
-620_sort.cpp: In instantiation of ‘void sort(T*, int) [with T = std::__cxx11::basic_string<char>]’:
-620_sort.cpp:14:22:   required from here
-620_sort.cpp:26:16: error: cannot convert ‘std::__cxx11::basic_string<char>’ to ‘double’ in assignment
-   26 |          temp=a[i];
-      |               ~^
-      |                |
-      |                std::__cxx11::basic_string<char>
+template$ g++ 620_sort.cpp 
+template$ ./a.out
+36	35	34	33	32	31	31	32	33	34	35	36	
+Ahmad	Ali	Kamran	Koroush	Leyla	
 template$ 
-
