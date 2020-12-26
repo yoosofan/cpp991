@@ -1,0 +1,22 @@
+template$ g++ 62_sort_before_template.cpp 
+62_sort_before_template.cpp: In function ‘int main()’:
+62_sort_before_template.cpp:11:9: error: ‘search’ was not declared in this scope; did you mean ‘bsearch’?
+   11 |   cout<<search<double>(ae,3,6)<<endl;
+      |         ^~~~~~
+      |         bsearch
+62_sort_before_template.cpp:11:16: error: expected primary-expression before ‘double’
+   11 |   cout<<search<double>(ae,3,6)<<endl;
+      |                ^~~~~~
+62_sort_before_template.cpp:12:16: error: expected primary-expression before ‘double’
+   12 |   cout<<search<double>(ae,33,6)<<endl;
+      |                ^~~~~~
+62_sort_before_template.cpp:14:3: error: ‘mySwap’ was not declared in this scope
+   14 |   mySwap<int>(i,j);
+      |   ^~~~~~
+62_sort_before_template.cpp:14:10: error: expected primary-expression before ‘int’
+   14 |   mySwap<int>(i,j);
+      |          ^~~
+62_sort_before_template.cpp:16:8: error: expected primary-expression before ‘double’
+   16 |   sort<double>(ae,6);
+      |        ^~~~~~
+template$ 
