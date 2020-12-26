@@ -108,10 +108,24 @@ int main(){
 void f1(void){
   double x[]{10, 12, 34, 54};
   myArray<double> d(x, sizeof(x) / sizeof(double));
-  cin >> d ;
-  cout << d[1] << endl;
-  d[1] = 15;
-  f2(d);
+  cout << d;
+  cout << endl;
+  myArray<double> b;
+  cin >> b ;
+  cout << b[1] << endl;
+  b[1] = 15;
+  f2(b);
+  string sx[]{"Kamran", "Reza", "Kmabiz", "Ali"};
+
+  myArray<string> r(x, 4);
+  cout << r;
+  cout << endl;
+  myArray z;
+  cin >> z ;
+  cout << z[1] << endl;
+  z[1] = 15;
+  f2(z);
+  
 }
 template<typename T>void f2(myArray<T> k){
   k.print();
