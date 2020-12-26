@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-template<typename T> void sort(int T[], int n);
+template<typename T> void sort(T [], int n);
 
 int main(){
   double ae[20];

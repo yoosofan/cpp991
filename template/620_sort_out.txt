@@ -1,25 +1,10 @@
-template$ g++ 620_sort.cpp 
-620_sort.cpp:3:36: error: declaration of ‘int* T’ shadows template parameter
-    3 | template<typename T> void sort(int T[], int n);
-      |                                ~~~~^~~
-620_sort.cpp:3:10: note: template parameter ‘T’ declared here
-    3 | template<typename T> void sort(int T[], int n);
-      |          ^~~~~~~~
-620_sort.cpp: In function ‘int main()’:
-620_sort.cpp:10:16: error: cannot convert ‘double*’ to ‘int*’
-   10 |   sort<double>(ae,6);
-      |                ^~
+emplate$ g++ 620_sort.cpp 
+620_sort.cpp: In instantiation of ‘void sort(T*, int) [with T = std::__cxx11::basic_string<char>]’:
+620_sort.cpp:14:22:   required from here
+620_sort.cpp:26:16: error: cannot convert ‘std::__cxx11::basic_string<char>’ to ‘double’ in assignment
+   26 |          temp=a[i];
+      |               ~^
       |                |
-      |                double*
-620_sort.cpp:3:36: note:   initializing argument 1 of ‘void sort(int*, int) [with T = double]’
-    3 | template<typename T> void sort(int T[], int n);
-      |                                ~~~~^~~
-620_sort.cpp:14:16: error: cannot convert ‘std::string*’ {aka ‘std::__cxx11::basic_string<char>*’} to ‘int*’
-   14 |   sort<string>(sta, 5);
-      |                ^~~
-      |                |
-      |                std::string* {aka std::__cxx11::basic_string<char>*}
-620_sort.cpp:3:36: note:   initializing argument 1 of ‘void sort(int*, int) [with T = std::__cxx11::basic_string<char>]’
-    3 | template<typename T> void sort(int T[], int n);
-      |                                ~~~~^~~
+      |                std::__cxx11::basic_string<char>
 template$ 
+
