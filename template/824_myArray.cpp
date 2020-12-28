@@ -1,16 +1,16 @@
 #include "820_myArray.h"
 
-//~ template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
-  //~ bool retVal = false;
-  //~ int i = 0;
-  //~ if(a.n == b.n)
-    //~ for(i = 0; i < a.n; i++)
-      //~ if(a.a[i] != b.a[i])
-        //~ break;
-  //~ if(i == a.n)
-    //~ retVal = true;
-  //~ return retVal;
-//~ }
+template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
+  bool retVal = false;
+  int i = 0;
+  if(a.n == b.n)
+    for(i = 0; i < a.n; i++)
+      if(a.a[i] != b.a[i])
+        break;
+  if(i == a.n)
+    retVal = true;
+  return retVal;
+}
 /*
 template<typename Y> istream& operator>>(istream& in1, myArray<Y>& b){
   // delete[] b.a;  b.a = nullptr;

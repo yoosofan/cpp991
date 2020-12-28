@@ -99,7 +99,7 @@ template<typename T> class myArray{
   }
 };
 
-
+/*
 template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
@@ -111,3 +111,4 @@ template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ 
     retVal = true;
   return retVal;
 }
+*/
