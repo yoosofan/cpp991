@@ -1,9 +1,69 @@
-template$ g++ 840_complexcls.cpp 820_myArray.cpp 820_main.cpp 
-/usr/bin/ld: /tmp/cc52mQ4z.o: in function `f1()':
-820_main.cpp:(.text+0xbf): undefined reference to `std::ostream& operator<< <double>(std::ostream&, myArray<double> const&)'
-/usr/bin/ld: 820_main.cpp:(.text+0x104): undefined reference to `std::istream& operator>><double>(std::istream&, myArray<double>&)'
-/usr/bin/ld: 820_main.cpp:(.text+0x2cd): undefined reference to `std::ostream& operator<< <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::ostream&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)'
-/usr/bin/ld: 820_main.cpp:(.text+0x312): undefined reference to `std::istream& operator>><std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::istream&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&)'
-/usr/bin/ld: 820_main.cpp:(.text+0x445): undefined reference to `std::ostream& operator<< <complexCls>(std::ostream&, myArray<complexCls> const&)'
-collect2: error: ld returned 1 exit status
+template$ g++ 840_complexcls.cpp 820_main.cpp 
+template$ ./a.out
+n = 4
+a[0]= 10
+a[1]= 12
+a[2]= 34
+a[3]= 54
+
+Enter n 2
+Enter a[0]: 5
+Enter a[1]: 8
+8
+copy construcotr
+ n = 2
+a[0] = 5
+a[1] = 15
+Destructor
+n = 4
+a[0]= Kamran
+a[1]= Reza
+a[2]= Kmabiz
+a[3]= Ali
+
+Enter n qq
+index out of range: 1
+template$ ./a.out
+n = 4
+a[0]= 10
+a[1]= 12
+a[2]= 34
+a[3]= 54
+
+Enter n 2
+Enter a[0]: 4
+Enter a[1]: 7
+7
+copy construcotr
+ n = 2
+a[0] = 4
+a[1] = 15
+Destructor
+n = 4
+a[0]= Kamran
+a[1]= Reza
+a[2]= Kmabiz
+a[3]= Ali
+
+Enter n 3
+Enter a[0]: qq
+Enter a[1]: aa
+Enter a[2]: zz
+aa
+copy construcotr
+ n = 3
+a[0] = qq
+a[1] = 
+a[2] = zz
+Destructor
+n = 3
+a[0]= (3, 5)
+a[1]= (2, 4)
+a[2]= (5, 9)
+
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
 template$ 
