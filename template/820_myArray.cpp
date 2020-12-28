@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "840_complexcls.h"
+#include "840_complexcls.h"
 
 using namespace std;
 template<typename T> class myArray{
