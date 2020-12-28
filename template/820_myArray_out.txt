@@ -1,4 +1,4 @@
-template$ g++ 820_myArray.cpp 
+template$ g++ 840_complexcls.cpp 820_myArray.cpp
 template$ ./a.out
 n = 4
 a[0]= 10
@@ -7,12 +7,12 @@ a[2]= 34
 a[3]= 54
 
 Enter n 2
-Enter a[0]: 4
-Enter a[1]: 8
-8
+Enter a[0]: 5
+Enter a[1]: 7
+7
 copy construcotr
  n = 2
-a[0] = 4
+a[0] = 5
 a[1] = 15
 Destructor
 n = 4
@@ -21,14 +21,22 @@ a[1]= Reza
 a[2]= Kmabiz
 a[3]= Ali
 
-Enter n 2
-Enter a[0]: ttt
-Enter a[1]: kkk
-kkk
+Enter n 3
+Enter a[0]: ee
+Enter a[1]: yy
+Enter a[2]: qq
+yy
 copy construcotr
- n = 2
-a[0] = ttt
+ n = 3
+a[0] = ee
 a[1] = 
+a[2] = qq
+Destructor
+n = 3
+a[0]= (3, 5)
+a[1]= (2, 4)
+a[2]= (5, 9)
+
 Destructor
 Destructor
 Destructor

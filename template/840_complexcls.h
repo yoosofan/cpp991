@@ -1,3 +1,7 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
 class complexCls{
   double r = 0, i = 0;
   //explicit complexCls(double m=0 , double n=0) {r=m;i=n;}
@@ -25,3 +29,8 @@ class complexCls{
   friend complexCls operator *(const complexCls& a, const complexCls& b);
   friend ostream& operator << (ostream& o1, const complexCls& a);
 };
+
+complexCls operator +(const complexCls& a, const complexCls& b);
+complexCls operator -(const complexCls& a,const complexCls& b);
+complexCls operator *(const complexCls& a, const complexCls& b);
+ostream& operator << (ostream& o1, const complexCls& a);
