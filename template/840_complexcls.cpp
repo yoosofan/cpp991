@@ -1,3 +1,5 @@
+#include "840_complexcls.h"
+
 ostream& operator << (ostream& o1, const complexCls& a){
    o1 << '(' << a.r << ", " << a.i << ')' ;
    return o1;

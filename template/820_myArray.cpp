@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstdlib>
+#include "840_complexcls.h"
+
 using namespace std;
 template<typename T> class myArray{
   static const int MAX = 100;
@@ -124,6 +126,9 @@ void f1(void){
   cout << z[1] << endl;
   z[1] = 15;
   f2(z);
+  complexCls acmp[] = { {3,5}, {2,4}, {5,9} };
+  myArray<complexCls> myacmp(acmp, 3);
+  cout << myacmp << endl;
 }
 template<typename T> void f2(myArray<T> k){
   k.print();
