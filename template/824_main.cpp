@@ -16,7 +16,7 @@ void f1(void){
   cout << d;
   cout << endl;
   if(d2 == d) 
-    cout << "d2 == d" << endl
+    cout << "d2 == d" << endl;
   myArray<double> b;
   cin >> b ;
   cout << b[1] << endl;

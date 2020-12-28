@@ -1,17 +1,12 @@
 template$ g++ 840_complexcls.cpp 824_main.cpp 824_myArray.cpp
 In file included from 824_main.cpp:4:
-824_myArray.h:68:60: warning: friend declaration ‘bool operator==(const myArray<T>&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
-   68 |   friend bool operator==(const myArray& a, const myArray& b);
-      |                                                            ^
-824_myArray.h:68:60: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
-824_main.cpp: In function ‘void f1()’:
-824_main.cpp:19:30: error: expected ‘;’ before ‘myArray’
-   19 |     cout << "d2 == d" << endl
-      |                              ^
-      |                              ;
-   20 |   myArray<double> b;
-      |   ~~~~~~~                     
-824_main.cpp:21:10: error: ‘b’ was not declared in this scope
-   21 |   cin >> b ;
-      |          ^
+824_myArray.h:68:66: warning: friend declaration ‘bool operator==(const myArray<T>&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
+   68 |   friend bool operator==(const myArray<T>& a, const myArray<T>& b);
+      |                                                                  ^
+824_myArray.h:68:66: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
+/usr/bin/ld: /tmp/ccMyuSqV.o: in function `f1()':
+824_main.cpp:(.text+0x137): undefined reference to `operator==(myArray<double> const&, myArray<double> const&)'
+/usr/bin/ld: 824_main.cpp:(.text+0x3a3): undefined reference to `operator==(myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)'
+/usr/bin/ld: 824_main.cpp:(.text+0x578): undefined reference to `operator==(myArray<complexCls> const&, myArray<complexCls> const&)'
+collect2: error: ld returned 1 exit status
 template$ 
