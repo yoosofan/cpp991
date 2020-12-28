@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-template<typename T>class myArray{
+template<typename T> class myArray{
   static const int MAX = 100;
   T a[MAX];
   int n;
@@ -46,7 +46,7 @@ template<typename T>class myArray{
     for(int i = 0; i < n; i++)
       cout << "a[" << i << "] = " << a[i] << endl;
   }
-  myArray& operator=(const myArray& b){
+  myArray operator=(const myArray& b){
     cout << "Assignment myArray" << endl;
     copy(b);
     return *this;
@@ -116,7 +116,6 @@ void f1(void){
   b[1] = 15;
   f2(b);
   string sx[]{"Kamran", "Reza", "Kmabiz", "Ali"};
-
   myArray<string> r(sx, 4);
   cout << r;
   cout << endl;
@@ -125,8 +124,7 @@ void f1(void){
   cout << z[1] << endl;
   z[1] = 15;
   f2(z);
-  
 }
-template<typename T>void f2(myArray<T> k){
+template<typename T> void f2(myArray<T> k){
   k.print();
 }
