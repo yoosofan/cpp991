@@ -27,9 +27,11 @@ class complexCls{
   friend complexCls operator -(const complexCls& a,const complexCls& b);
   friend complexCls operator *(const complexCls& a, const complexCls& b);
   friend ostream& operator << (ostream& o1, const complexCls& a);
+  friend istream& operator >> (istream& o1, complexCls& a);
 };
 
 complexCls operator +(const complexCls& a, const complexCls& b);
 complexCls operator -(const complexCls& a,const complexCls& b);
 complexCls operator *(const complexCls& a, const complexCls& b);
 ostream& operator << (ostream& o1, const complexCls& a);
+istream& operator >> (istream& o1, complexCls& a);
