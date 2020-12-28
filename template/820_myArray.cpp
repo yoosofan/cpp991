@@ -1,3 +1,4 @@
+/*
 #include "820_myArray.h"
 
 template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
@@ -36,3 +37,4 @@ template<typename T> ostream& operator<<(ostream& out1, const myArray<T>& b){
     out1 << "a[" << i << "]= " << b.a[i] << endl;
   return out1;
 }
+*/
