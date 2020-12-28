@@ -3,6 +3,13 @@
 #include <cmath>
 using namespace std;
 
+class complexCls;
+complexCls operator +(const complexCls& a, const complexCls& b);
+complexCls operator -(const complexCls& a,const complexCls& b);
+complexCls operator *(const complexCls& a, const complexCls& b);
+ostream& operator << (ostream& o1, const complexCls& a);
+istream& operator >> (istream& o1, complexCls& a);
+
 class complexCls{
   double r = 0, i = 0;
   //explicit complexCls(double m=0 , double n=0) {r=m;i=n;}
@@ -28,10 +35,14 @@ class complexCls{
   friend complexCls operator *(const complexCls& a, const complexCls& b);
   friend ostream& operator << (ostream& o1, const complexCls& a);
   friend istream& operator >> (istream& o1, complexCls& a);
+  
+  friend bool operator== (const complexCls& a, const complexCls& b){
+    return a.i == b.i && a.r == b.r ;
+  }
+
+  friend bool operator!= (const complexCls& a, const complexCls& b){
+    return a.i != b.i || a.r != b.r ;
+  }
+  
 };
 
-complexCls operator +(const complexCls& a, const complexCls& b);
-complexCls operator -(const complexCls& a,const complexCls& b);
-complexCls operator *(const complexCls& a, const complexCls& b);
-ostream& operator << (ostream& o1, const complexCls& a);
-istream& operator >> (istream& o1, complexCls& a);

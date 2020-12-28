@@ -97,5 +97,17 @@ template<typename T> class myArray{
       out1 << "a[" << i << "]= " << b.a[i] << endl;
     return out1;
   }
-
 };
+
+
+template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
+  bool retVal = false;
+  int i = 0;
+  if(a.n == b.n)
+    for(i = 0; i < a.n; i++)
+      if(a.a[i] != b.a[i])
+        break;
+  if(i == a.n)
+    retVal = true;
+  return retVal;
+}
