@@ -1,45 +1,62 @@
-template$ g++ 840_complexcls.cpp 820_myArray.cpp
-template$ ./a.out
-n = 4
-a[0]= 10
-a[1]= 12
-a[2]= 34
-a[3]= 54
-
-Enter n 2
-Enter a[0]: 5
-Enter a[1]: 8
-8
-copy construcotr
- n = 2
-a[0] = 5
-a[1] = 15
-Destructor
-n = 4
-a[0]= Kamran
-a[1]= Reza
-a[2]= Kmabiz
-a[3]= Ali
-
-Enter n 3
-Enter a[0]: yy
-Enter a[1]: hh
-Enter a[2]: mm
-hh
-copy construcotr
- n = 3
-a[0] = yy
-a[1] = 
-a[2] = mm
-Destructor
-n = 3
-a[0]= (3, 5)
-a[1]= (2, 4)
-a[2]= (5, 9)
-
-Destructor
-Destructor
-Destructor
-Destructor
-Destructor
+template$ g++ 840_complexcls.cpp 820_myArray.cpp 820_main.cpp 
+820_main.cpp:6:29: error: variable or field ‘f2’ declared void
+    6 | template<typename T>void f2(myArray<T>);
+      |                             ^~~~~~~
+820_main.cpp:6:29: error: ‘myArray’ was not declared in this scope
+820_main.cpp:6:38: error: expected primary-expression before ‘>’ token
+    6 | template<typename T>void f2(myArray<T>);
+      |                                      ^
+820_main.cpp:6:39: error: expected primary-expression before ‘)’ token
+    6 | template<typename T>void f2(myArray<T>);
+      |                                       ^
+820_main.cpp: In function ‘void f1()’:
+820_main.cpp:13:3: error: ‘myArray’ was not declared in this scope
+   13 |   myArray<double> d(x, sizeof(x) / sizeof(double));
+      |   ^~~~~~~
+820_main.cpp:13:11: error: expected primary-expression before ‘double’
+   13 |   myArray<double> d(x, sizeof(x) / sizeof(double));
+      |           ^~~~~~
+820_main.cpp:14:11: error: ‘d’ was not declared in this scope
+   14 |   cout << d;
+      |           ^
+820_main.cpp:16:11: error: expected primary-expression before ‘double’
+   16 |   myArray<double> b;
+      |           ^~~~~~
+820_main.cpp:17:10: error: ‘b’ was not declared in this scope
+   17 |   cin >> b ;
+      |          ^
+820_main.cpp:20:3: error: ‘f2’ was not declared in this scope; did you mean ‘f1’?
+   20 |   f2(b);
+      |   ^~
+      |   f1
+820_main.cpp:22:17: error: expected primary-expression before ‘>’ token
+   22 |   myArray<string> r(sx, 4);
+      |                 ^
+820_main.cpp:22:19: error: ‘r’ was not declared in this scope
+   22 |   myArray<string> r(sx, 4);
+      |                   ^
+820_main.cpp:25:17: error: expected primary-expression before ‘>’ token
+   25 |   myArray<string> z;
+      |                 ^
+820_main.cpp:25:19: error: ‘z’ was not declared in this scope
+   25 |   myArray<string> z;
+      |                   ^
+820_main.cpp:31:21: error: expected primary-expression before ‘>’ token
+   31 |   myArray<complexCls> myacmp(acmp, 3);
+      |                     ^
+820_main.cpp:31:23: error: ‘myacmp’ was not declared in this scope; did you mean ‘acmp’?
+   31 |   myArray<complexCls> myacmp(acmp, 3);
+      |                       ^~~~~~
+      |                       acmp
+820_main.cpp: At global scope:
+820_main.cpp:34:30: error: variable or field ‘f2’ declared void
+   34 | template<typename T> void f2(myArray<T> k){
+      |                              ^~~~~~~
+820_main.cpp:34:30: error: ‘myArray’ was not declared in this scope
+820_main.cpp:34:39: error: expected primary-expression before ‘>’ token
+   34 | template<typename T> void f2(myArray<T> k){
+      |                                       ^
+820_main.cpp:34:41: error: ‘k’ was not declared in this scope
+   34 | template<typename T> void f2(myArray<T> k){
+      |                                         ^
 template$ 
