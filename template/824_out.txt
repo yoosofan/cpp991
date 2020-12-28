@@ -1,17 +1,10 @@
-emplate$ 
-template$ g++ 840_complexcls.cpp 824_main.cpp 824_myArray.cpp
-/usr/bin/ld: /tmp/cca3rT0h.o: in function `f1()':
-824_main.cpp:(.text+0x137): undefined reference to `bool operator==<double>(myArray<double> const&, myArray<double> const&)'
-/usr/bin/ld: 824_main.cpp:(.text+0x3a3): undefined reference to `bool operator==<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)'
-/usr/bin/ld: 824_main.cpp:(.text+0x578): undefined reference to `bool operator==<complexCls>(myArray<complexCls> const&, myArray<complexCls> const&)'
-collect2: error: ld returned 1 exit status
-template$ g++ 840_complexcls.cpp 824_main.cpp 824_myArray.cpp
+emplate$ g++ 840_complexcls.cpp 824_main.cpp 824_myArray.cpp
 In file included from 824_main.cpp:4:
-824_myArray.h:71:61: warning: friend declaration ‘bool operator==(const myArray<T>&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
-   71 |   friend bool operator== (const myArray& a, const myArray& b);
-      |                                                             ^
-824_myArray.h:71:61: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
-/usr/bin/ld: /tmp/ccvtFLm3.o: in function `f1()':
+824_myArray.h:71:67: warning: friend declaration ‘bool operator==(const myArray<T>&, const myArray<T>&)’ declares a non-template function [-Wnon-template-friend]
+   71 |   friend bool operator== (const myArray<T>& a, const myArray<T>& b);
+      |                                                                   ^
+824_myArray.h:71:67: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
+/usr/bin/ld: /tmp/ccVJTGXx.o: in function `f1()':
 824_main.cpp:(.text+0x137): undefined reference to `operator==(myArray<double> const&, myArray<double> const&)'
 /usr/bin/ld: 824_main.cpp:(.text+0x3a3): undefined reference to `operator==(myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)'
 /usr/bin/ld: 824_main.cpp:(.text+0x578): undefined reference to `operator==(myArray<complexCls> const&, myArray<complexCls> const&)'
