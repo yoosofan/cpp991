@@ -1,4 +1,4 @@
-#include "820_myArray.h"
+#include "824_myArray.h"
 
 template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
   bool retVal = false;
