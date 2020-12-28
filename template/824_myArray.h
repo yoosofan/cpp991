@@ -5,6 +5,9 @@
 #include "840_complexcls.h"
 using namespace std;
 
+template<typename T> class myArray;
+template<typename T> bool operator== (const myArray<T>& a, const myArray<T>& b);
+
 template<typename T> class myArray{
   static const int MAX = 100;
   T a[MAX];
@@ -65,7 +68,7 @@ template<typename T> class myArray{
   }
 
   // https://en.cppreference.com/w/cpp/language/friend
-  template<typename K> friend bool operator== (const myArray<K>& a, const myArray<K>& b);
+  friend bool operator== (const myArray& a, const myArray& b);
 
   friend istream& operator>> (istream& in1, myArray& b){
     // delete[] b.a;  b.a = nullptr;
