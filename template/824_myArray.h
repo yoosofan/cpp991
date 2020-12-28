@@ -68,7 +68,8 @@ template<typename T> class myArray{
   }
 
   // https://en.cppreference.com/w/cpp/language/friend
-  template<typename K>  friend bool operator== (const myArray<K>& a, const myArray<K>& b);
+  //~ template<typename K>  friend bool operator== (const myArray<K>& a, const myArray<K>& b);
+  friend bool operator== <T>(const myArray<T>& a, const myArray<T>& b);
 
   friend istream& operator>> (istream& in1, myArray& b){
     // delete[] b.a;  b.a = nullptr;
