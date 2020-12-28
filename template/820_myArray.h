@@ -63,9 +63,9 @@ template<typename T> class myArray{
     }
     return a[index];
   }
-  template<typename K> friend ostream& operator<<(ostream& out1, const myArray<K>& b);
-  template<typename K> friend bool operator==(const myArray<K>& a, const myArray<K>& b);
-  template<typename K> friend istream& operator>>(istream& in1, myArray<K>& b);
+  friend ostream& operator<<(ostream& out1, const myArray<T>& b);
+  friend bool operator==(const myArray<T>& a, const myArray<T>& b);
+  friend istream& operator>>(istream& in1, myArray<T>& b);
 };
 template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b);
 template<typename Y> istream& operator>>(istream& in1, myArray<Y>& b);
