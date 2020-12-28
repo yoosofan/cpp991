@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "840_complexcls.h"
+#include "820_myArray.h"
 
 void f1(void);
 template<typename T>void f2(myArray<T>);
