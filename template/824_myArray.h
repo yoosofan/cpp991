@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
-
 using namespace std;
 
 template<typename T> class myArray;
@@ -69,7 +68,7 @@ template<typename T> class myArray{
   // https://en.cppreference.com/w/cpp/language/friend
   //~ template<typename K>  friend bool operator== (const myArray<K>& a, const myArray<K>& b);
   // https://stackoverflow.com/a/13451992/886607
-  friend bool operator== <>(const myArray<T>& a, const myArray<T>& b);
+  friend bool operator== <>(const myArray& a, const myArray& b);
 
   friend istream& operator>> (istream& in1, myArray& b){
     // delete[] b.a;  b.a = nullptr;
@@ -98,7 +97,7 @@ template<typename T> class myArray{
   }
 };
 
-/*
+// https://stackoverflow.com/a/1639821/886607
 template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
@@ -110,4 +109,3 @@ template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ 
     retVal = true;
   return retVal;
 }
-*/

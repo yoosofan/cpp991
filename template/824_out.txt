@@ -1,8 +1,58 @@
-emplate$ 
-template$ g++ 840_complexcls.cpp 824_main.cpp 824_myArray.cpp
-/usr/bin/ld: /tmp/ccpL8ZH8.o: in function `f1()':
-824_main.cpp:(.text+0x137): undefined reference to `bool operator==<double>(myArray<double> const&, myArray<double> const&)'
-/usr/bin/ld: 824_main.cpp:(.text+0x3a3): undefined reference to `bool operator==<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, myArray<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)'
-/usr/bin/ld: 824_main.cpp:(.text+0x578): undefined reference to `bool operator==<complexCls>(myArray<complexCls> const&, myArray<complexCls> const&)'
-collect2: error: ld returned 1 exit status
-temp
+template$ g++ 840_complexcls.cpp 824_main.cpp
+template$ ./a.out
+Assignment myArray
+copy construcotr
+Destructor
+n = 4
+a[0]= 10
+a[1]= 12
+a[2]= 34
+a[3]= 54
+
+d2 == d
+Enter n 3
+Enter a[0]: 5
+Enter a[1]: 7
+Enter a[2]: 9
+7
+copy construcotr
+ n = 3
+a[0] = 5
+a[1] = 15
+a[2] = 9
+Destructor
+copy construcotr
+n = 4
+a[0]= Kamran
+a[1]= Reza
+a[2]= Kmabiz
+a[3]= Ali
+
+r2 == r
+Enter n 3
+Enter a[0]: w
+Enter a[1]: d
+Enter a[2]: g
+d
+copy construcotr
+ n = 3
+a[0] = w
+a[1] = 
+a[2] = g
+Destructor
+copy construcotr
+n = 3
+a[0]= (3, 5)
+a[1]= (2, 4)
+a[2]= (5, 9)
+
+myacmp == myacmp2
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
+Destructor
+template$ 
