@@ -35,3 +35,6 @@ complexCls complexCls::operator++(int dummy){ // a++
   i++;    
   return result;  
 }
+double complexCls::Magnitude(){
+    return sqrt(r * r + i * i );
+}

@@ -15,9 +15,7 @@ class complexCls{
   void Show(){
     cout << '(' << r << ',' << i << ')' << '\t' << endl;
   }
-  double Magnitude(){
-    return sqrt(r * r + i * i );
-  }
+  double Magnitude();
   //operator bool() const {cout<<"aaa:::: "<<endl;return r==0 && i==0 ? false : true;}
   bool operator!() const {
     cout << "aaa:::: " << endl;
