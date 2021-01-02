@@ -12,7 +12,7 @@ int main(){
 
 void f1(void){
   try {
-    f2(3);
+    f2(-3);
     f3(2);
   }catch(int mm){
     cout << "In f3 " << mm << endl;
