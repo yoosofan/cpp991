@@ -1,0 +1,32 @@
+template$ g++ 1124_my_map.cpp 
+1124_my_map.cpp:5:14: error: ISO C++ forbids in-class initialization of non-const static member ‘myArray<T>::MAX’
+    5 |   static int MAX = 300;
+      |              ^~~
+1124_my_map.cpp:6:10: error: array bound is not an integer constant before ‘]’ token
+    6 |   T a[MAX];
+      |          ^
+1124_my_map.cpp:8:15: error: array bound is not an integer constant before ‘]’ token
+    8 |   string s[MAX];
+      |               ^
+1124_my_map.cpp: In member function ‘T& myArray<T>::operator[](std::string)’:
+1124_my_map.cpp:14:10: error: ‘s’ was not declared in this scope
+   14 |       if(s[i] == m1 )
+      |          ^
+1124_my_map.cpp:15:16: error: ‘a’ was not declared in this scope
+   15 |         return a[i];
+      |                ^
+1124_my_map.cpp:17:7: error: ‘s’ was not declared in this scope
+   17 |       s[n] = m1;
+      |       ^
+1124_my_map.cpp:18:14: error: ‘a’ was not declared in this scope
+   18 |       return a[n++];
+      |              ^
+1124_my_map.cpp:20:12: error: ‘a’ was not declared in this scope
+   20 |     return a[n-1];
+      |            ^
+1124_my_map.cpp: In instantiation of ‘class myArray<double>’:
+1124_my_map.cpp:24:19:   required from here
+1124_my_map.cpp:5:14: error: ISO C++ forbids in-class initialization of non-const static member ‘myArray<double>::MAX’
+    5 |   static int MAX = 300;
+      |              ^~~
+template$ 
