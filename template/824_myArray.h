@@ -98,7 +98,7 @@ template<typename T> class myArray{
 };
 
 // https://stackoverflow.com/a/1639821/886607
-template<typename K> bool operator==(const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
+template<typename K> bool operator== (const myArray<K>& a, const myArray<K>& b){ // < > <= >= !=
   bool retVal = false;
   int i = 0;
   if(a.n == b.n)
