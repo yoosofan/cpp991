@@ -1,0 +1,10 @@
+exception$ g++ 220.cpp 
+exception$ ./a.out
+1
+12
+In f3 1
+13
+My Exception catch 8  The equation does not have real root
+Third catch in main 
+End 
+exception$ 
