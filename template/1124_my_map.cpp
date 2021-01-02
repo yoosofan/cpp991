@@ -2,7 +2,7 @@
 using namespace std;
 template<typename T>
 class myArray{
-  static int MAX = 300;
+  static const int MAX = 300;
   T a[MAX];
   int n;
   string s[MAX];
