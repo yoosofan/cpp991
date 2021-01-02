@@ -12,14 +12,14 @@ class myArray{
     for(i=0; i<n; i++)
       if(s[i] == m1 )
         return a[i];
-    s[n]=m1;
+    s[n] = m1;
     return a[n++];
   }
 };
 int main(){
   myArray<double> m1;
-  m1["ali"]=23;
-  m1["reza"]=45;
-  cout<<m1["ali"]<<endl;
+  m1["ali"] = 23;
+  m1["reza"] = 45;
+  cout << m1["ali"] << endl;
   return 0;
 }
