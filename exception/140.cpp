@@ -71,7 +71,7 @@ RootCls solve(double a, double b, double c){
   double delta;
   if(a == 0 && b == 0)
     throw 6;
-  if(a==0){
+  if(a == 0){
     retVal.root1 = retVal.root2 = -c / b ;
   }
   else{
