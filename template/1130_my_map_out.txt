@@ -1,0 +1,4 @@
+template$ g++ 1124_my_map.cpp 
+template$ ./a.out
+23
+template$ 
