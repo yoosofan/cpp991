@@ -1,3 +1,7 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
 void tprintf(const char* format){ // base function
   cout << format;
 }

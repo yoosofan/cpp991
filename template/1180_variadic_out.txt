@@ -1,32 +1,4 @@
 template$ g++ 1180_variadic.cpp 
-In file included from 1180_variadic.cpp:3:
-1180_variadic.h: In function ‘void tprintf(const char*)’:
-1180_variadic.h:2:3: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
-    2 |   cout << format;
-      |   ^~~~
-      |   std::cout
-In file included from 1180_variadic.cpp:2:
-/usr/include/c++/9/iostream:61:18: note: ‘std::cout’ declared here
-   61 |   extern ostream cout;  /// Linked to standard output
-      |                  ^~~~
-In file included from 1180_variadic.cpp:3:
-1180_variadic.h: In function ‘void tprintf(const char*, T, Targs ...)’:
-1180_variadic.h:9:12: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
-    9 |            cout << value;
-      |            ^~~~
-      |            std::cout
-In file included from 1180_variadic.cpp:2:
-/usr/include/c++/9/iostream:61:18: note: ‘std::cout’ declared here
-   61 |   extern ostream cout;  /// Linked to standard output
-      |                  ^~~~
-In file included from 1180_variadic.cpp:3:
-1180_variadic.h:13:9: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
-   13 |         cout << *format;
-      |         ^~~~
-      |         std::cout
-In file included from 1180_variadic.cpp:2:
-/usr/include/c++/9/iostream:61:18: note: ‘std::cout’ declared here
-   61 |   extern ostream cout;  /// Linked to standard output
-      |                  ^~~~
+template$ ./a.out
+Hello world! 123
 template$ 
-
