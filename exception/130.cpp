@@ -1,41 +1,34 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-void f1(int i);
-void f2(int mm);
-void f4(int mm);
-void f3(void);
+void f2(int i);
+void f3(int mm);
+void f1(void);
 
 int main(){
-  f3();
+  f1();
   return 0;
 }
 
-void f1(int i){
+void f1(void){
+  try {
+    f2(3);
+    f3(2);
+  }catch(int mm){
+    cout << "In f3 " << mm << endl;
+  }
+}
+
+void f2(int i){
   if( i <= 0)
     throw 1;
   else
     cout << i << endl;
 }
 
-void f2(int mm){
-  if (mm > 20)
-    throw 2;
-  else
-    cout << mm << endl;
-}
-
-void f4(int mm){
+void f3(int mm){
   if(mm < 10)
-    throw "Error ";
+    throw 5;
   cout << "In f4 mm "<< mm << endl;
 }
 
-void f3(void){
-  try {
-    f1(3);
-    f4(2);
-  }catch(int mm){
-    cout << "In f3 " << mm << endl;
-  }
-}

@@ -1,0 +1,5 @@
+exception$ g++ 130.cpp 
+exception$ ./a.out
+3
+In f3 5
+exception$ 
