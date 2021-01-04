@@ -10,7 +10,7 @@ int main(){
         return 0;
     }
     //cout<<f1.getline(st,200).gcount()<<endl;
-    while(f1.getline(st,200).gcount() > 0 )    
+    while(f1.getline(st, 200).gcount() > 0 )    
         cout << st << endl;
     //while(f1.getline(st,200)>0)    cout<<st<<endl;
   f1.close();
