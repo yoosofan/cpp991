@@ -6,6 +6,7 @@ using namespace std;
 int main(){
     fstream f1("input.integers.txt");
     //fstream f1("folder2/folder3/file1.txt");
+    //fstream f1("../../folder2/folder3/file1.txt");
 /*
   Relative addressing:
   آدرس دهی نسبی در این جا یعنی از پوشه‌ی کنونی یکی بالاتر برو
