@@ -1,0 +1,10 @@
+      |                ^~~~~
+exception$ ./a.out
+1
+12
+In f3 1
+13
+My Exception catch My error 1
+Third catch in main 
+Except2 
+End 
